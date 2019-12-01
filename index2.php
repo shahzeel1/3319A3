@@ -14,7 +14,6 @@
 <h1 style="text-align: center;">
 <span style="font-family: Verdana, Geneva, sans-serif;">Zeel's Doctor Database</span>
 </h1>
-<hr>
 
 <form action="getdoctors.php" method="post">
 
@@ -22,7 +21,7 @@
 <table style="width: 100%;">
   <tbody>
     <tr>
-      <td style="width: 50.0000%;"><strong>Sort By:</strong></td>
+      <div style="text-align: center;"><strong>Sort By:</strong></div>
       <td style="width: 50.0000%;">
         <input name="radio1" type="radio" value="First Name A-Z">First Name A-Z
         <br>
