@@ -35,7 +35,7 @@ action="getdoctorinfo.php" method="post">';
 echo '<input type="enter" value="Get Doctor Info">';
 echo '</form>';
 }
-if($val = "Last Name A-Z" ) 
+if($val == "Last Name A-Z" ) 
 {
     echo '<form 
 action="getdoctorinfo.php" method="post">';
@@ -55,7 +55,7 @@ action="getdoctorinfo.php" method="post">';
 echo '<input type="enter" value="Get Doctor Info">';
 echo '</form>';
 }
-if($val = "First Name Z-A") 
+if($val == "First Name Z-A") 
 { 
     echo '<form 
 action="getdoctorinfo.php" method="post">';
@@ -75,7 +75,7 @@ action="getdoctorinfo.php" method="post">';
 echo '<input type="submit" value="Get Doctor Info">';
 echo '</form>';
 }
-if($val = "Last Name Z-A") { 
+if($val == "Last Name Z-A") { 
     echo '<form 
 action="getdoctorinfo.php" method="post">';
    $query = "SELECT * FROM doctor ORDER BY lastName DESC";
