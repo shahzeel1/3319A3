@@ -35,7 +35,7 @@
   </tbody>
 </table>
 
-<?php include'getdoctors.php'; ?>
+<?php include'getdoctors.php'; ?>    
 <input name="enter" type="submit" value="Get Doctors">
 </form>
 
