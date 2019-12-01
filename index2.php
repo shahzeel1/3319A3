@@ -37,7 +37,7 @@
 </table>
 
 <?php include'getdoctors.php'; ?>
-<input name="enter" type="enter" value="Get Doctors">
+<input name="enter" type="select" value="Get Doctors">
 </form>
 
 <hr>
