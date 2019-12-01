@@ -18,7 +18,7 @@ $val = $_POST['radio'];
  if ($val == "First Name A-Z") 
 { 
     echo '<form 
-action="getdoctorinfo.php" method="post">';
+action="getdocdata.php" method="post">';
    $query = "SELECT * FROM doctor ORDER BY firstName ASC";
    $result = mysqli_query($connection,$query);
    if (!$result) {
@@ -38,7 +38,7 @@ echo '</form>';
 if($val == "Last Name A-Z" ) 
 {
     echo '<form 
-action="getdoctorinfo.php" method="post">';
+action="getdocdata.php" method="post">';
    $query = "SELECT * FROM doctor ORDER BY lastName ASC";
    $result = mysqli_query($connection,$query);
    if (!$result) {
@@ -58,7 +58,7 @@ echo '</form>';
 if($val == "First Name Z-A") 
 { 
     echo '<form 
-action="getdoctorinfo.php" method="post">';
+action="getdocdata.php" method="post">';
    $query = "SELECT * FROM doctor ORDER BY firstName DESC";
    $result = mysqli_query($connection,$query);
    if (!$result) {
@@ -77,7 +77,7 @@ echo '</form>';
 }
 if($val == "Last Name Z-A") { 
     echo '<form 
-action="getdoctorinfo.php" method="post">';
+action="getdocdata.php" method="post">';
    $query = "SELECT * FROM doctor ORDER BY lastName DESC";
    $result = mysqli_query($connection,$query);
    if (!$result) {
