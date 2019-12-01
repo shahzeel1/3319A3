@@ -24,19 +24,19 @@
       <td style="width: 50.0000%;"><div style="text-align: center;"><strong>Sort By:</strong></div></td>
       <td style="width: 50.0000%;">
         <div>
-        <input name="radio1" type="radio" value="First Name A-Z">First Name A-Z
+        <input name="radio1" type="radio" id="FNA" value="First Name A-Z">First Name A-Z
         </div>
         <br>
         <div>  
-        <input name="radio2" type="radio" value="Last Name A-Z">Last Name A-Z
+        <input name="radio2" type="radio" id = "LNA" value="Last Name A-Z">Last Name A-Z
         </div>
         <br>
         <div>  
-        <input name="radio3" type="radio" value="First Name Z-A">First Name Z-A
+        <input name="radio3" type="radio" id="FND" value="First Name Z-A">First Name Z-A
         </div>    
         <br>
         <div>  
-        <input name="radio4" type="radio" value="Last Name Z-A">Last Name Z-A
+        <input name="radio4" type="radio" id = "LND" value="Last Name Z-A">Last Name Z-A
         </div>    
       </td>
     </tr>
