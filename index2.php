@@ -21,7 +21,7 @@
 <table style="width: 100%;">
   <tbody>
     <tr>
-      <div style="text-align: center;"><strong>Sort By:</strong></div>
+      <td style="width: 50.0000%;"><div style="text-align: center;"><strong>Sort By:</strong></div></td>
       <td style="width: 50.0000%;">
         <input name="radio1" type="radio" value="First Name A-Z">First Name A-Z
         <br>
