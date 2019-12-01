@@ -9,9 +9,12 @@
 <body>
 <?php
 include 'connecttodb.php';
-#if (isset($_POST['enter'])) 
+if (isset($_POST['enter'])) 
 
-{ if(isset($_POST['radio1'])) 
+$val = $_POST['radio'];
+
+    
+{ if ($val == "First Name A-Z")) 
 { 
     echo '<form 
 action="getdoctorinfo.php" method="post">';
@@ -31,7 +34,7 @@ action="getdoctorinfo.php" method="post">';
 echo '<input type="enter" value="Get Doctor Info">';
 echo '</form>';
 }
-if(isset($_POST['radio2'])) 
+if($val = "Last Name A-Z" ) 
 {
     echo '<form 
 action="getdoctorinfo.php" method="post">';
@@ -51,7 +54,7 @@ action="getdoctorinfo.php" method="post">';
 echo '<input type="enter" value="Get Doctor Info">';
 echo '</form>';
 }
-if(isset($_POST['radio3'])) 
+if($val = "First Name Z-A") 
 { 
     echo '<form 
 action="getdoctorinfo.php" method="post">';
@@ -71,7 +74,7 @@ action="getdoctorinfo.php" method="post">';
 echo '<input type="submit" value="Get Doctor Info">';
 echo '</form>';
 }
-if(isset($_POST['radio4'])) { 
+if($val = "Last Name Z-A") { 
     echo '<form 
 action="getdoctorinfo.php" method="post">';
    $query = "SELECT * FROM doctor ORDER BY lastName DESC";
