@@ -10,6 +10,7 @@
 <?php
 include 'connecttodb.php';
 if (isset($_POST['enter'])) 
+{
 
 $val = $_POST['radio'];
 
@@ -92,6 +93,7 @@ action="getdoctorinfo.php" method="post">';
 	echo "</ol>";
 echo '<input type="submit" value="Get Doctor Info">';
 echo '</form>';
+}
 }
 }
  ?>
