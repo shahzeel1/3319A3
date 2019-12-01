@@ -13,6 +13,7 @@ include 'connecttodb.php';
 <ol>
 <?php
    $doctorLicenseNum= $_POST["doctors"];
+    echo "<li>The value of doctorLicenseNum is".$doctorLicenseNum."/li>";
    $query = 'SELECT * FROM doctor, hospital WHERE doctor.hospID=hospital.hospCode AND doctor.licenseNum="' . $doctorLicenseNum. '"';
     $result=mysqli_query($connection,$query);
     if (!$result) {
