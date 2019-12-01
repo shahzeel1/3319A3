@@ -32,7 +32,7 @@ action="getdoctorinfo.php" method="post">';
    }
    mysqli_free_result($result);
 	echo "</ol>";
-echo '<input type="enter" value="Get Doctor Info">';
+echo '<input type="submit" value="Get Doctor Info">';
 echo '</form>';
 }
 if($val == "Last Name A-Z" ) 
@@ -52,7 +52,7 @@ action="getdoctorinfo.php" method="post">';
    }
    mysqli_free_result($result);
 	echo "</ol>";
-echo '<input type="enter" value="Get Doctor Info">';
+echo '<input type="submit" value="Get Doctor Info">';
 echo '</form>';
 }
 if($val == "First Name Z-A") 
