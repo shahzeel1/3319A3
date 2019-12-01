@@ -15,7 +15,7 @@ if (isset($_POST['enter']))
 $val = $_POST['radio'];
 
     
-{ if ($val == "First Name A-Z") 
+ if ($val == "First Name A-Z") 
 { 
     echo '<form 
 action="getdoctorinfo.php" method="post">';
@@ -93,7 +93,6 @@ action="getdoctorinfo.php" method="post">';
 	echo "</ol>";
 echo '<input type="submit" value="Get Doctor Info">';
 echo '</form>';
-}
 }
 }
  ?>
