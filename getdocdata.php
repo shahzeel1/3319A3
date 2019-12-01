@@ -14,7 +14,7 @@ include 'connecttodb.php';
 <?php
    $doctorLicenseNum= $_POST["doctors"];
     echo "<li>The value of doctorLicenseNum is".$doctorLicenseNum."/li>";
-   $query = 'SELECT * FROM doctor, hospital WHERE doctor.hospID=hospital.hospCode AND doctor.licenseNum="' . $doctorLicenseNum. '"';
+   $query = ' SELECT * FROM doctor, hospital WHERE doctor.hosWorksAt=hospital.hosCode AND doctor.docLicNum="' . $doctorLicenseNum. '"';
     $result=mysqli_query($connection,$query);
     if (!$result) {
          die("Database query failed.");
