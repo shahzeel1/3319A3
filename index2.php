@@ -135,16 +135,17 @@
     <input type="submit" name="submit" value="Check it out">  
   </p> 
   </form>
-  <hr>
-  <form action="getpatientbyohip.php" method="post">
-    <br><u>Get Patient and Assigned Doctor by OHIP Number:</u>
-    <p>Enter the OHIP Number:
+  
+  <form action="getpatientinfo.php" method="post" >
+      <h3 style="text-align: center;">
+    <br>Get Patient Info
+    </h3>
+    <p style="text-align: center;">Enter Patient Id (OHIP No.)
       <br>
       <input type="text" name="ohip" value="">
       <br>
       <input type="submit" value="Get Patient Info">
     </p>
-  </form>
   <hr>
   <form action="updatepatientlist.php" method="post">
     <br><u>Enter Doctor and Patient Name to Assign or Remove Doctor:</u>
