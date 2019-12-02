@@ -21,7 +21,7 @@ include 'connecttodb.php';//connect to the db
          die("Database query failed.");
      }
     // display the doc info
-    $row=mysqli_fetch_assoc($result)
+    $row=mysqli_fetch_assoc($result);
         
         echo "<li>";
         echo "<b>Name: </b>" . $row["firstName"] . " " . $row["lastName"] ."</li>"; // name
