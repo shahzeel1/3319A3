@@ -10,10 +10,10 @@
 <?php
    include 'connecttodb.php';
 ?>
-    <ol>
+    <ul>
 <?php
         $licDate= $_POST["licdate"];
-echo"<h1>Doctor's Licensed Before".$licDate."</h1>";
+echo"<h1>Doctor's Licensed Before ".$licDate."</h1>";
 
    
    $query1= 'SELECT * FROM doctor WHERE licenseDate < "' .$licDate. '"';
@@ -27,6 +27,6 @@ echo"<h1>Doctor's Licensed Before".$licDate."</h1>";
      }
    mysqli_close($connection);
 ?>
-</ol>
+</ul>
 </body>
 </html>
