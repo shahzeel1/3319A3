@@ -1,41 +1,48 @@
+<!-- This page displays the doctors in the order that the user selected-->
 <!DOCTYPE html>
 <html>
 <head>
 	<title>List of Doctors</title>
 	<link rel="stylesheet" type="text/css" href="doctordb.css">
-	<link href="https://fonts.google.com/specimen/Fjalla+One" rel-"stylesheet">
-	<script src="doctors.js"></script>
 </head>
+    
 <body>
+<h1>List of Doctor's</h1>    
+    
 <?php
-include 'connecttodb.php';
+include 'connecttodb.php';<!-- Connect to the database-->
+<!-- Make sure the enter button was triggered-->
 if (isset($_POST['enter'])) 
 {
 
-$val = $_POST['radio'];
+$order = $_POST['radio']; <!-- the order that the user has selected -->
 
-    
- if ($val == "First Name A-Z") 
+ <!-- For the following if statements the doctor`s first and last name will be displayed-->    
+<!-- FN ASC --> 
+if ($order == "First Name A-Z") 
 { 
     echo '<form 
-action="getdocdata.php" method="post">';
+action="getdocdata.php" method="post">';<!-- call the doctor info page-->
    $query = "SELECT * FROM doctor ORDER BY firstName ASC";
-   $result = mysqli_query($connection,$query);
-   if (!$result) {
+   $result = mysqli_query($connection,$query);<!- send in the query to the db-->
+   <!-- no result means the query failed-->
+    if (!$result) {
         die("Databases query failed.");
-    }   echo "<ol>";
+    }   echo "<ul>";<!-- unordered list -->
+    <!-- for each of the doctors display their names-->
 	while ($row = mysqli_fetch_assoc($result)) {
 	echo "<br>";
         echo '<input type="radio" name="doctors" value="';
         echo $row["docLicNum"];
         echo '">' . $row["firstName"] . " " . $row["lastName"] . "<br>";
    }
-   mysqli_free_result($result);
-	echo "</ol>";
+   mysqli_free_result($result);<!-- free memory-->
+	echo "</ul>";
 echo '<input type="submit" value="Get Doctor Info">';
 echo '</form>';
 }
-if($val == "Last Name A-Z" ) 
+    <!--LN ASC-->
+if($order == "Last Name A-Z" ) 
 {
     echo '<form 
 action="getdocdata.php" method="post">';
@@ -43,7 +50,7 @@ action="getdocdata.php" method="post">';
    $result = mysqli_query($connection,$query);
    if (!$result) {
         die("Databases query failed.");
-    }   echo "<ol>";
+    }   echo "<ul>";
 	while ($row = mysqli_fetch_assoc($result)) {
 	echo "<br>";
         echo '<input type="radio" name="doctors" value="';
@@ -51,11 +58,12 @@ action="getdocdata.php" method="post">';
         echo '">' . $row["firstName"] . " " . $row["lastName"] . "<br>";
    }
    mysqli_free_result($result);
-	echo "</ol>";
+	echo "</ul>";
 echo '<input type="submit" value="Get Doctor Info">';
 echo '</form>';
 }
-if($val == "First Name Z-A") 
+    <!--FN DESC-->
+if($order == "First Name Z-A") 
 { 
     echo '<form 
 action="getdocdata.php" method="post">';
@@ -63,7 +71,7 @@ action="getdocdata.php" method="post">';
    $result = mysqli_query($connection,$query);
    if (!$result) {
         die("Databases query failed.");
-    }   echo "<ol>";
+    }   echo "<ul>";
 	while ($row = mysqli_fetch_assoc($result)) {
 	echo "<br>";
         echo '<input type="radio" name="doctors" value="';
@@ -71,18 +79,19 @@ action="getdocdata.php" method="post">';
         echo '">' . $row["firstName"] . " " . $row["lastName"] . "<br>";
    }
    mysqli_free_result($result);
-	echo "</ol>";
+	echo "</ul>";
 echo '<input type="submit" value="Get Doctor Info">';
 echo '</form>';
 }
-if($val == "Last Name Z-A") { 
+    <!--LS DESC-->
+if($order == "Last Name Z-A") { 
     echo '<form 
 action="getdocdata.php" method="post">';
    $query = "SELECT * FROM doctor ORDER BY lastName DESC";
    $result = mysqli_query($connection,$query);
    if (!$result) {
         die("Databases query failed.");
-    }   echo "<ol>";
+    }   echo "<ul>";
 	while ($row = mysqli_fetch_assoc($result)) {
 	echo "<br>";
         echo '<input type="radio" name="doctors" value="';
@@ -90,7 +99,7 @@ action="getdocdata.php" method="post">';
         echo '">' . $row["firstName"] . " " . $row["lastName"] . "<br>";
    }
    mysqli_free_result($result);
-	echo "</ol>";
+	echo "</ul>";
 echo '<input type="submit" value="Get Doctor Info">';
 echo '</form>';
 }

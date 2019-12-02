@@ -1,42 +1,44 @@
+<!-- This page displays the information of the doctor selected -->
 <!DOCTYPE html>
 <html>
 <head>
 	<title>Doctor's Info</title>
 	<link rel="stylesheet" type="text/css" href="doctordb.css">
-	<link href="https://fonts.google.com/specimen/Fjalla+One" rel-"stylesheet">
-	<script src="doctors.js"></script>
 </head>
+    
 <body>
 <?php
-include 'connecttodb.php';
+include 'connecttodb.php';//connect to the db 
 ?>
 <h1>Doctor's Information:</h1>
 <ul>
 <?php
-   $doctorLicenseNum= $_POST["doctors"];
-   $query = ' SELECT * FROM doctor, hospital WHERE doctor.hosWorksAt=hospital.hosCode AND doctor.docLicNum="' . $doctorLicenseNum. '"';
-    $result=mysqli_query($connection,$query);
+   $docLicNum= $_POST["doctors"];
+   $query = ' SELECT * FROM doctor, hospital WHERE doctor.hosWorksAt=hospital.hosCode AND doctor.docLicNum="' . $docLicNum. '"'; //get's info of the doctor specified by the user
+    $result=mysqli_query($connection,$query);// send query into the db
+   // if there was no result there was an error
     if (!$result) {
          die("Database query failed.");
      }
-    while ($row=mysqli_fetch_assoc($result)) {
+    // display the doc info
+    $row=mysqli_fetch_assoc($result)
+        
         echo "<li>";
-        echo "<b>Name: </b>" . $row["firstName"] . " " . $row["lastName"] ."</li>";
+        echo "<b>Name: </b>" . $row["firstName"] . " " . $row["lastName"] ."</li>"; // name
         echo "<li>";
-        echo "<b>License Number: </b>" . " " . $row["docLicNum"] . "</li>";
+        echo "<b>License Number: </b>" . " " . $row["docLicNum"] . "</li>";// license num
         echo "<li>";
-        echo "<b>Speciality: </b>" . " " .  $row["speciality"] . "</li> ";
+        echo "<b>Speciality: </b>" . " " .  $row["speciality"] . "</li> ";//speciality
         echo "<li>";
-        echo  "<b>License Date: </b>" . " " .  $row[licenseDate] . "</li>";
+        echo  "<b>License Date: </b>" . " " .  $row[licenseDate] . "</li>";// lic date
         echo "<li>";
-        echo  "<b>Hospital: </b>" . " " .  $row["hosWorksAt"] . "</li>";
-	echo '<img src="'.$row["docPicture"].'" height="60" width="60">';     
-}
-     mysqli_free_result($result);
+        echo  "<b>Hospital: </b>" . " " .  $row["hosWorksAt"] . "</li>";   // hospital the work at
+
+     mysqli_free_result($result);// clear memory that result took up
 ?>
 </ul>
 <?php
-   mysqli_close($connection);
+   mysqli_close($connection);// close the connection to the db
 ?>
 </body>
 </html>

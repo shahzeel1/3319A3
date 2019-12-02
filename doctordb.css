@@ -14,18 +14,10 @@ background: linear-gradient(to bottom, #060B5C 0%, #289FED 50%, #F05973 100%);
 }
 h1 {
 	font-family: 'Comfortaa', cursive;
+    text-align: center
+    
 }
 table, th, td {
 	vertical-align: top;
 }
-.button {
-  background-color: #4CAF50;
-  border: none;
-  color: white;
-  padding: 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-}
+

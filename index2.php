@@ -1,3 +1,4 @@
+<!--This is the home page of the doctor's Database-->
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,9 +6,12 @@
   <link rel="stylesheet" type="text/css" href="doctordb.css">
 </head>
 <body>
-  <h1 style="text-align: center;">Zeel's Doctor Database</span></h1>
+  <h1>Zeel's Doctor Database</h1> <!-- Header-->
+    <!-- If the user chooses to sort the doctor names, display the results in the the get doctors page-->
   <form action="getdoctors.php" method="post">
-    <table style="width: 100%;">
+   <!-- Display all the possible ways to sort the names and give the user radio button choices to select.
+        The user hits the get doctors button to get the results.-->
+      <table style="width: 100%;">
       <tbody>
         <tr>
           <td style="width: 50.0000%;">
@@ -15,7 +19,7 @@
           </td>
           <td style="width: 24.9624%;">
             <div>
-              <input name="radio" id="1" type="radio" value="First Name A-Z">First Name A-Z
+              <input name="radio" id="1" type="radio" value="First Name A-Z" checked="checked">First Name A-Z
             </div>
             <br>
             <div>
@@ -33,13 +37,15 @@
           <td style="width: 24.9624%;">
             <div data-empty="true" style="text-align: center;">
               <br>
-              <input name="enter" type="submit" value="Get Doctors" class="fr-rounded">
+              <input name="enter" type="submit" value="Get Doctors" class="fr-rounded"><!-- Enter Button -->
             </div>
           </td>
         </tr>
       </tbody>
-    </table><!--?php include'getdoctors.php'; ?-->
+    </table>
   </form>
+    
+    
   <form action="getdoclic.php" method="post">
     <h3 style="text-align: center;">
       <br>
