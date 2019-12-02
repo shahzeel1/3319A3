@@ -27,11 +27,14 @@
    }
     else{
    try {
-   $query = 'DELETE FROM doctor WHERE doctor.docLicNum="' . $licNum . '" AND doctor.firstName = "' . $fName . '" AND doctor.lastName = "'. $lName .'"'; // delete teh doctor
-       $result = mysqli_query($connection, $query);
-       var_dump($result);
-   if (!$result) {
-	throw new Exception("The doctor has patients"); // cause error if the doc has patients 
+    $query1 ='SELECT * FROM treats WHERE doctor.docLicNum="'.$licNum'";';
+       $result = mysqli_query($connection, $query1);
+       if ($result)
+       {
+    $query = 'DELETE FROM doctor WHERE doctor.docLicNum="' . $licNum . '" AND doctor.firstName = "' . $fName . '" AND doctor.lastName = "'. $lName .'"'; // delete teh doctor
+       $result2 = mysqli_query($connection, $query);
+   
+           if (!$result2) {
 	die("Error: Unable to Delete Doctor " . mysqli_error($connection));
     } 
     else {
@@ -40,7 +43,7 @@
        
 }
         // make sure the doc has to be deleted 
-        catch (Exception $e) {
+        else {
 	echo "Are you sure you want to delete a doctor that treats patients right now?";
 	echo "<form action='cascdeletedoc.php' method='post'>";
 	echo "<input type='submit' name='$licNum' value='Delete the Doc'>";

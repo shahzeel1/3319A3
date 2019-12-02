@@ -83,6 +83,7 @@
       <input type="radio" name="hosp" value="ABC">Victoria, London ON
       <br>
       <input type="radio" name="hospl" value="DDE">Victoria, Victoria BC
+    <br>    
       <input type="submit" value="Add Doctor">
     </p>
   </form>
