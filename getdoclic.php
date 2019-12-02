@@ -23,7 +23,7 @@ echo"<h1>Doctor's Licensed Before ".$licDate."</h1>";
    }
     while ($row=mysqli_fetch_assoc($result)) {
         echo '<li>';
-        echo "<b>Name: </b>" . $row["firstName"] . " " . $row["lastName"] ." " .  "<b>License Number: </b>" . " " . $row["licenseNum"] . " " . "<b>Specialty: </b>" . " " . $row["specialty"] . "</li>"; 
+        echo "<b>Name: </b>" . $row["firstName"] . " " . $row["lastName"] ." " .  "<b>License No.: </b>" . " " . $row["docLicNum"] . " " . "<b>Speciality: </b>" . " " . $row["speciality"] . "</li>"; 
      }
    mysqli_close($connection);
 ?>
