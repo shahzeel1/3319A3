@@ -65,9 +65,9 @@
 
 <form action="addnewdoc.php" method="post" enctype="multipart/form-data">
 <h3 action="addnewdoc.php" enctype="multipart/form-data" method="post" style="text-align: left;">First Name: 
-    <input type="text" name="fname" value="">
+    <input type="text" name="fName" value="">
     <br>Last Name: 
-    <input type="text" name="lname" value="">
+    <input type="text" name="lName" value="">
     <br>Specialty: 
     <input type="text" name="spec" value="">
     <br>License Number (ex. HW10): 
@@ -77,16 +77,16 @@
     <br>
     <br>Hospital:
     <br>
-    <input type="radio" name="hospital" value="BBC">St.Joseph, London ON
+    <input type="radio" name="hosp" value="BBC" checked = "checked">St.Joseph, London ON
     <br>
-    <input type="radio" name="hospital" value="ABC">Victoria, London ON
+    <input type="radio" name="hosp" value="ABC">Victoria, London ON
     <br>
-    <input type="radio" name="hospital" value="DDE">Victoria, Victoria BC
+    <input type="radio" name="hospl" value="DDE">Victoria, Victoria BC
     <br>Add Doctor's Image:
     <br>
     <input type="file" name="file" id="file" value="">
     <br>
-    <input type="submit" value="Add Doctor" disabled="disabled">
+    <input type="submit" value="Add Doctor" >
   </h3>
 </form>
 
@@ -129,7 +129,6 @@ What did you want to change the name to?<br>
 <br>
 <input type="submit" name="submit" value="List">
 </form>
-
 <hr>
 <form action="getpatientbyohip.php" method="post">
 <br>
