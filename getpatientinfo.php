@@ -28,9 +28,14 @@ try
           die("Patient Does Not Exist");
    }
     while ($row=mysqli_fetch_assoc($result)) {
-        echo '<li>';
-        echo "<b>Patient Name: </b>" . $row["p_fname"] . " " . $row["p_lname"] ." " .  "<b>OHIP Number: </b>" . " " . $row["p_OHIP"] . " " . "<b>Doctor Name: </b>" . " " . $row["d_fname"] . " " . $row["d_lname"] . "</li>"; 
-     
+        
+        echo "<li>";
+        echo "<b>Patient Name: </b>" . $row["p_fname"] . " " . $row["p_lname"] ."</li>";
+        echo "<li>";
+        echo "<b>Ohip Number: </b>" . " " . $row["p_OHIP"] . "</li>";
+        echo "<li>";
+        echo "<b>Doctor Name: </b>" . " " .  $row["d_fname"] . " ". $row["d_lname"]." "."</li> ";
+        
      }
 } catch (Exception $e) {
      echo 'Patient does not exist.';
