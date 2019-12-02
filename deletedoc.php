@@ -46,7 +46,7 @@
         // make sure the doc has to be deleted 
         else {
 	echo "Are you sure you want to delete a doctor that treats patients right now?";
-	echo "<form action='' method='post'>";       
+	echo "<form action='cascadedeletedoc.php' method='post'>";       
 	echo "<input type='submit' name='yes' value='Yes Delete the Doc'>";
 	echo "</form>"; 
             

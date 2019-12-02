@@ -9,48 +9,27 @@
 <script src="js.js"></script>
 <?php
 include 'connecttodb.php';
+include 'deletedoc.pho';    
 ?>
 <h1>Delete a Doctor:</h1>
 <ol>
 <?php
-   session_start();
-   $licNum= $_POST["$licNum"];
-   $querySetFalse= 'SET FOREIGN_KEY_CHECKS=0';
    
+      $query = 'DELETE FROM doctor WHERE doctor.docLicNum="' . $licNum . '" AND doctor.firstName = "' . $fName . '" AND doctor.lastName = "'. $lName .'"'; // delete teh doctor
+       $result2 = mysqli_query($connection, $query);
    
+           if (!$result2) {
+	die("Error: Unable to Delete Doctor " . mysqli_error($connection));
+    } 
+    else {
+        echo "Doctor Deleted!"; 
+    }
+       
+
    
-   $result=mysqli_query($connection,$querySet);
-    if (!$result) {
-         die("database set foreign key to 0 failed.");
-     } 
-    else { echo "foreign key set to 0";}
+         mysqli_close($connection);
     
-    $queryDeleteTreat= 'DELETE FROM treats WHERE treats.docLicNum="'. $licNum .'"';
-     $result=mysqli_query($connection,$queryDeleteTreat);
-    if (!$result) {
-         die("Could not delete from treats");
-     } 
-    else { echo "deleted from treats";} 
-    
-    $queryDeleteDoc= 'DELETE FROM doctor WHERE doctor.docLicNum = "'. $licNum .'"';
-     $result=mysqli_query($connection,$queryDeleteDoc);
-    if (!$result) {
-         die("doc was not deleted from doc table");
-     } 
-    else { echo "doc deleted from doc table.";}
-    
-    $querySetTrue= 'SET FOREIGN_KEY_CHECKS=1';
-    
-    $result=mysqli_query($connection,$querySetTrue);
-    if (!$result) {
-         die("doreign key set to 1");
-     } else 
-    { echo "Deleted.";}
-     mysqli_free_result($result);
 ?>
-</ol>
-<?php
-   mysqli_close($connection);
-?>
+    </ol>
 </body>
 </html>
