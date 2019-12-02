@@ -146,32 +146,18 @@
       <br>
       <input type="submit" value="Get Patient Info">
     </p>
-  <hr>
+    </form>
   <form action="updatepatientlist.php" method="post">
-    <br><u>Enter Doctor and Patient Name to Assign or Remove Doctor:</u>
-    <br>
-    <br>Doctors:
-    <br><!--?php
-   $query = "SELECT * FROM doctor";
-   $result = mysqli_query($connection,$query);
-   if (!$result) {
-        die("Database query failed. Could not retrieve doctors.");
-    }
-   while ($row = mysqli_fetch_assoc($result)) {
-        echo '<input type="radio" name="doctors" value="';
-        echo $row["licenseNum"];
-        echo '"-->' . $row["firstName"] . " " . $row["lastName"] . "
-    <br>"; } mysqli_free_result($result); echo "
-    <br>";
-echo "Patients:";
-echo "
-    <br>"; $query = "SELECT * FROM patient"; $result1 = mysqli_query($connection,$query); if (!$result) { die("Database query failed."); } while ($row = mysqli_fetch_assoc($result1)) { echo '
-    <input type="radio" name="patient" value="';
-        echo $row[">' . $row["firstName"] . " " . $row["lastName"] . "
-    <br>"; } mysqli_free_result($result1); ?&gt; 
-    <input type="submit" name="submitAssign" value="Assign Doctor to Patient"> 
-    <input type="submit" name="submitRemove" value="Remove Doctor from Patient">
-  </form>
+    <h3 style="text-align: center;">Add/Remove Doctor to a Patient</h3>
+  <p style="text-align: left;">DoctorID: 
+    <input type="text" name="doc" value="">
+    <br>PatientID: 
+    <input type="text" name="doc" value="">
+  </p>
+  <p style="text-align: left;">Add or Remove? 
+    <input type="submit" name="submitAssign" value="Add"> 
+    <input type="submit" name="submitRemove" value="Remove">
+  </p>
   <hr>
   <form action="getdocnopatients.php" method="post">
     <br><u>List All Doctors With no Patients:</u>
@@ -179,7 +165,7 @@ echo "
     <br>
     <input type="submit" name="submit" value="List">
   </form>
-  <hr>
+  
   <form action="updatedocpic.php" enctype="multipart/form-data" method="post"><u>Add a Doctor's Missing Image:</u>
     <br><!--?php
    include 'uploaddocpic.php';

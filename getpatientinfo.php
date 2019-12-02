@@ -12,7 +12,7 @@
    include 'connecttodb.php';
 ?>
 <h1>Patient Information:</h1>
-
+<ul>
 <?php
    $ohip= $_POST["ohip"];
   
@@ -27,17 +27,13 @@
     while ($row=mysqli_fetch_assoc($result)) {
         
         echo "<li>";
-        echo "<ul><b>Patient Name: </b>" . $row["p_fname"] . " " . $row["p_lname"] ."</ul></li>";
-        echo "<li>";
-        echo "<b>Ohip Number: </b>" . " " . $row["p_OHIP"] . "</li>";
-        echo "<li>";
-        echo "<b>Doctor Name: </b>" . " " .  $row["d_fname"] . " ". $row["d_lname"]." "."</li> ";
+        echo "<b>Patient Name: </b>" . $row["p_fname"] . " " . $row["p_lname"] ." "."<b>Ohip Number: </b>" . " " . $row["p_OHIP"] . " "."<b>Doctor Name: </b>" . " " .  $row["d_fname"] . " ". $row["d_lname"]." "."</li> ";
         
      }
 
 
    mysqli_close($connection);
 ?>
-
+</ul>
 </body>
 </html>
