@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Doctor's Database</title>
-	<link rel="stylesheet" type="text/css" href="css.css">
+	<title>Doctor's Info</title>
+	<link rel="stylesheet" type="text/css" href="doctordb.css">
+	<link href="https://fonts.google.com/specimen/Fjalla+One" rel-"stylesheet">
+	<script src="doctors.js"></script>
 </head>
 <body>
-<script src="js.js"></script>
 <?php
 include 'connecttodb.php';
 ?>
@@ -13,7 +14,6 @@ include 'connecttodb.php';
 <ol>
 <?php
    $doctorLicenseNum= $_POST["doctors"];
-    echo "<li>The value of doctorLicenseNum is".$doctorLicenseNum."/li>";
    $query = ' SELECT * FROM doctor, hospital WHERE doctor.hosWorksAt=hospital.hosCode AND doctor.docLicNum="' . $doctorLicenseNum. '"';
     $result=mysqli_query($connection,$query);
     if (!$result) {

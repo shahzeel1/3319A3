@@ -22,7 +22,7 @@
   <tbody>
     <tr>
       <td style="width: 50.0000%;"><div style="text-align: center;"><strong>Sort By:</strong></div></td>
-      <td style="width: 50.0000%;">
+      <td style="width: 24.9624%;">
         <div>
         <input name="radio" id = "1" type="radio" if value="First Name A-Z">First Name A-Z
         </div>
@@ -39,26 +39,31 @@
         <input name="radio" id ="4" type="radio" value="Last Name Z-A">Last Name Z-A
         </div>    
       </td>
+        <td style="width: 24.9624%;">
+            <div data-empty="true" style="text-align: center;">
+              <br>
+              <input name="enter" type="submit" value="Get Doctors">
+            </div>
+          </td>
     </tr>
   </tbody>
 </table>
 
 <?php include'getdoctors.php'; ?>    
-<input name="enter" type="submit" value="Get Doctors">
+<input name="enter" type="submit" value="Get Doctors" class="fr-rounded">
 </form>
 
-<hr>
-<form action="getdocfromlicense.php" method="post">
-<br>
-<u>Get Doctor Qualified  Before License Date:</u>
-<p>Enter the date in this format: 1998-20-30
-<br>
-License Date: <input type="text" name="licdate">
-<br>
-<input type="submit" value="Get Doctor">
-</form>
+<h3 action="getdocfromlicense.php" method="post" style="text-align: center;">
+    <br>
+    <br>Want a Doctor who was licensed before a certain date? 
+  </h3>
+  <p action="getdocfromlicense.php" method="post" style="text-align: left;">Enter the license date in this format: YYYY-MM-DD</p>
+  <p action="getdocfromlicense.php" method="post" style="text-align: left;">
+    <br>
+    <input type="text" name="licdate" value="" class="fr-rounded">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 
+    <input type="submit" value="Get Doctor" class="fr-rounded">
+  </p>
 
-<hr>
 <form action="addnewdoc.php" method="post" enctype="multipart/form-data">
 <br>
 <u>Add a New Doctor:</u>
