@@ -11,7 +11,7 @@
 include 'connecttodb.php';
 ?>
 <h1>Doctor's Information:</h1>
-<ol>
+<ul>
 <?php
    $doctorLicenseNum= $_POST["doctors"];
    $query = ' SELECT * FROM doctor, hospital WHERE doctor.hosWorksAt=hospital.hosCode AND doctor.docLicNum="' . $doctorLicenseNum. '"';
@@ -23,18 +23,18 @@ include 'connecttodb.php';
         echo "<li>";
         echo "<b>Name: </b>" . $row["firstName"] . " " . $row["lastName"] ."</li>";
         echo "<li>";
-        echo "<b>License Number: </b>" . " " . $row["licenseNum"] . "</li>";
+        echo "<b>License Number: </b>" . " " . $row["docLicNum"] . "</li>";
         echo "<li>";
-        echo "<b>Specialtiy: </b>" . " " .  $row["specialty"] . "</li> ";
+        echo "<b>Speciality: </b>" . " " .  $row["speciality"] . "</li> ";
         echo "<li>";
         echo  "<b>License Date: </b>" . " " .  $row[licenseDate] . "</li>";
         echo "<li>";
-        echo  "<b>Hospital: </b>" . " " .  $row["hospName"] . "</li>";
+        echo  "<b>Hospital: </b>" . " " .  $row["hosWorksAt"] . "</li>";
 	echo '<img src="'.$row["docPicture"].'" height="60" width="60">';     
 }
      mysqli_free_result($result);
 ?>
-</ol>
+</ul>
 <?php
    mysqli_close($connection);
 ?>

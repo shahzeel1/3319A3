@@ -15,7 +15,6 @@ include 'connecttodb.php';
 <ul>
 <?php
    $query = 'SELECT * FROM doctor, hospital WHERE  doctor.docLicNum=hospital.headDoc ORDER BY hospital.name ASC';
-    echo $quer
     $result=mysqli_query($connection,$query);
     if (!$result) {
          die("Databse query failed.");
