@@ -10,7 +10,7 @@
 
 <?php
 	session_start();
-	include 'addocpic.php';
+	include 'docpic.php';
 	include 'connecttodb.php';
 ?>
 <ol>
