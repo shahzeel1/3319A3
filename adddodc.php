@@ -9,7 +9,7 @@
 </head>
 <body>
 <?php
-   include 'adddocpic.php';
+   include 'docpic.php';
    include 'connecttodb.php';
 ?>
 <h1>Adding a Doctor:</h1>
