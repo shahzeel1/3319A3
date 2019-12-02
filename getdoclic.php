@@ -10,13 +10,10 @@
 <?php
    include 'connecttodb.php';
 ?>
-<ul>    
+<h1>Doctors Before Date Entered:</h1>
+<ol>
 <?php
-    if (isset($_POST['enter'])) 
-{
-   $licDate= $_POST["licdate"];    
-echo"<h1>Doctor's Licensed Before".$licDate."</h1>";
-
+   $licDate= $_POST["licdate"];
    $query1= 'SELECT * FROM doctor WHERE licenseDate < "' .$licDate. '"';
    $result=mysqli_query($connection,$query1);
    if (!$result) {
@@ -24,11 +21,10 @@ echo"<h1>Doctor's Licensed Before".$licDate."</h1>";
    }
     while ($row=mysqli_fetch_assoc($result)) {
         echo '<li>';
-        echo "<b>Name: </b>" . $row["firstName"] . " " . $row["lastName"] ." " .  "<b>License No.: </b>" . " " . $row["docLicNum"] . " " . "<b>Specialty: </b>" . " " . $row["specialty"] . "</li>"; 
+        echo "<b>Name: </b>" . $row["firstName"] . " " . $row["lastName"] ." " .  "<b>License Number: </b>" . " " . $row["licenseNum"] . " " . "<b>Specialty: </b>" . " " . $row["specialty"] . "</li>"; 
      }
    mysqli_close($connection);
 ?>
-    }
-</ul>
+</ol>
 </body>
 </html>
