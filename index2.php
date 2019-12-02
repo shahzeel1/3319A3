@@ -119,7 +119,7 @@
     <br>Victoria, Victoria BC: 
     <input type="radio" name="hosp" value="DDE">
   </p>
-  <p>
+  <p style="text-align: left;">
     <br>What did you want to change the name to?
     <br>
     <input type="text" name="hospName" value=""> 
