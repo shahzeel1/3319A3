@@ -63,8 +63,8 @@
     <input type="submit" value="Get Doctor">
 </form>
 
-<form action="addnewdoc.php" method="post" enctype="multipart/form-data">
-<h3 action="addnewdoc.php" enctype="multipart/form-data" method="post" style="text-align: left;">First Name: 
+<form action="adddoc.php" method="post" enctype="multipart/form-data">
+<h3 action="adddoc.php" enctype="multipart/form-data" method="post" style="text-align: left;">First Name: 
     <input type="text" name="fName" value="">
     <br>Last Name: 
     <input type="text" name="lName" value="">
@@ -72,7 +72,7 @@
     <input type="text" name="spec" value="">
     <br>License Number (ex. HW10): 
     <input type="text" name="licNum" value="">
-    <br>License Date (ex. 2000-20-20): 
+    <br>License Date (YYYY-MM-DD): 
     <input type="text" name="licDate" value="">
     <br>
     <br>Hospital:
