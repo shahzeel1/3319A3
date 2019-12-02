@@ -20,10 +20,9 @@
    $query= 'SELECT * FROM patient WHERE OHIPNumber="' . $ohip . '"';
    $result1=mysqli_query($connection,$query);
    if (!$result1) {
-	die("Database query failed. Patient does not exist.);
-    
-   $query2= 'SELECT patient.firstname AS p_fname, patient.lastname AS p_lname, patient.ohip AS p_OHIP, doctor.firstName AS d_fname, doctor.lastName AS d_lname  FROM patient,treats,doctor  WHERE patient.ohip='.$ohipint. 'AND treats.ohip='.$ohipint.'AND treats.docLicNum=doctor.docLicNum;';
-   $result=mysqli_query($connection,$query2);
+	die("Database query failed. Patient does not exist.");
+   $query= 'SELECT patient.firstname AS p_fname, patient.lastname AS p_lname, patient.ohip AS p_OHIP, doctor.firstName AS d_fname, doctor.lastName AS d_lname  FROM patient,treats,doctor  WHERE patient.ohip='.$ohipint. 'AND treats.ohip='.$ohipint.'AND treats.docLicNum=doctor.docLicNum;';
+   $result=mysqli_query($connection,$query);
    if (!$result) {
           die("Patient does not exist");
    }
