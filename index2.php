@@ -51,16 +51,16 @@
 
 <?php include'getdoctors.php'; ?>   
 </form>
-<h3 action="getdoclic.php" method="post" style="text-align: center;">
-    <br>
-    <br>Want a Doctor who was licensed before a certain date? 
-  </h3>
-  <p>Enter the license date in this format: YYYY-MM-DD</p>
-  <p action="getdoclic.php" method="post" style="text-align: center;">
-    <br>
-    <input type="text" name="licdate" value="" class="fr-rounded">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 
-    <input name ="enter" type="submit" value="Get Doctors" class="fr-rounded">
-  </p>
+    
+<form action="getdoclic.php" method="post">
+<br>
+<u>Get Doctor Qualified  Before License Date:</u>
+<p>Enter the date in this format: 1998-20-30
+<br>
+License Date: <input type="text" name="licdate">
+<br>
+<input type="submit" value="Get Doctor">
+</form>
 
 <form action="addnewdoc.php" method="post" enctype="multipart/form-data">
 <br>
