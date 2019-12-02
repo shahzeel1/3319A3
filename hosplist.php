@@ -21,7 +21,7 @@ include 'connecttodb.php';
      }
     while ($row=mysqli_fetch_assoc($result)) {
         echo "<li>";
-        echo "<b>Hospital Name: </b>" . " " . $row["hospital.name"] . " " . "<b>Doctor Name: </b>" . $row["firstName"] . " " . $row["lastName"] ." " .  "<b>Start Date </b>" . " " . $row[headDocStartDate] . " " . "<b>Speciality: </b>" . " " .  $row["speciality"] . " " .  "<b>License Date: </b>" . " " .  $row[licenseDate] . " " . "</li>";
+        echo "<b>Hospital Name: </b>" . " " . $row["name"] . " " . "<b>Doctor Name: </b>" . $row["firstName"] . " " . $row["lastName"] ." " .  "<b>Start Date </b>" . " " . $row[headDocStartDate] . " " . "<b>Speciality: </b>" . " " .  $row["speciality"] . " " .  "<b>License Date: </b>" . " " .  $row[licenseDate] . " " . "</li>";
      }
      mysqli_free_result($result);
 ?>
