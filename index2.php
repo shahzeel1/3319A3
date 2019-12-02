@@ -57,11 +57,10 @@
     <br>
     <br>Want a Doctor who was licensed before a certain date? 
   </h3>
-<p>Enter the date in this format: 1998-20-30
+<p>Enter the license date in this format: YYYY-MM-DD
 <br>
-License Date: <input type="text" name="licdate">
-<br>
-<input type="submit" value="Get Doctor">
+<input type="text" name="licdate">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 
+    <input type="submit" value="Get Doctor">
 </form>
 
 <form action="addnewdoc.php" method="post" enctype="multipart/form-data">
