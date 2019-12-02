@@ -19,8 +19,8 @@
 try 
 {
    
-   $query1= 'SELECT patient.firstname AS p_fname, patient.lastname AS p_lname, patient.ohipe AS p_OHIP, doctor.firstName AS d_fname, doctor.lastName AS d_lname  FROM patient,treats,doctor  WHERE patient.ohip="'.$ohip.'" AND treats.patient="'. $ohip .'" AND treats.doctor=doctor.docLicNum';
-   $result=mysqli_query($connection,$query1);
+   $query= 'SELECT patient.firstname AS p_fname, patient.lastname AS p_lname, patient.ohip AS p_OHIP, doctor.firstName AS d_fname, doctor.lastName AS d_lname  FROM patient,treats,doctor  WHERE patient.ohip='.$ohip. 'AND treats.ohip='.$ohip.'AND treats.docLicNum=doctor.docLicNum;';
+   $result=mysqli_query($connection,$query);
    if (!$result) {
           die("Database query failed.");
    }
