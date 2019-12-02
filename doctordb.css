@@ -6,11 +6,11 @@ body {
 
  font-family: 'Comfortaa', cursive;
 	font-size: 15px;
-background: #060B5C;
-background: -moz-linear-gradient(top, #060B5C 0%, #289FED 50%, #F05973 100%);
-background: -webkit-linear-gradient(top, #060B5C 0%, #289FED 50%, #F05973 100%);
-background: linear-gradient(to bottom, #060B5C 0%, #289FED 50%, #F05973 100%);
-	color: white;
+background: #F05973;
+background: -moz-linear-gradient(top, #F05973 0%, #289FED 50%, #F05973 100%);
+background: -webkit-linear-gradient(top, #F05973 0%, #289FED 50%, #F05973 100%);
+background: linear-gradient(to bottom, #F05973 0%, #289FED 50%, #F05973 100%);
+color: white;
 }
 h1 {
 	font-family: 'Comfortaa', cursive;
