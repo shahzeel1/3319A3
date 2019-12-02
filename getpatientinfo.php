@@ -3,7 +3,8 @@
 <head>
 	<title>Patient Info</title>
 	<link rel="stylesheet" type="text/css" href="doctordb.css">
-	<link href="https://fonts.google.com/specimen/Fjalla+One" rel-"stylesheet">
+	<link 
+          href="https://fonts.google.com/specimen/Fjalla+One" rel-"stylesheet">
 	<script src="doctors.js"></script>
 </head>
 <body>

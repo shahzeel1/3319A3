@@ -3,8 +3,6 @@
 <head>
   <title>Zeel's Doctor's Database</title>
   <link rel="stylesheet" type="text/css" href="doctordb.css">
-<link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet">
-  <script src="doctors.js"></script>
 </head>
 <body>
   <h1 style="text-align: center;">Zeel's Doctor Database</span></h1>
