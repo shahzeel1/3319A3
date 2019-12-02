@@ -27,8 +27,10 @@
    }
     else{
    try {
-   $query = 'DELETE FROM doctor WHERE doctor.docLicNum="' . $licNum . '" AND doctor.firstName = "' . $fName . '" AND doctor.lastName = "'. $lName .'"'; // delete teh doctor 
-   if (!mysqli_query($connection, $query)) {
+   $query = 'DELETE FROM doctor WHERE doctor.docLicNum="' . $licNum . '" AND doctor.firstName = "' . $fName . '" AND doctor.lastName = "'. $lName .'"'; // delete teh doctor
+       $result = mysqli_query($connection, $query);
+       var_dump($result);
+   if (!$result) {
 	throw new Exception("The doctor has patients"); // cause error if the doc has patients 
 	die("Error: Unable to Delete Doctor " . mysqli_error($connection));
     } 
