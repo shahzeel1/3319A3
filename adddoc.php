@@ -27,7 +27,7 @@
           die("Query failed.");
    }
    $row=mysqli_fetch_assoc($result);
-   $query = 'INSERT INTO doctor values("' . $licNum . '","' . $docfName . '","' . $doclName . '","' . $spec . '", "' . $licDate . '", "'. $hospID .'",)';
+   $query = 'INSERT INTO doctor values("' . $licNum . '","' . $docfName . '","' . $doclName . '","' . $spec . '", "' . $licDate . '", "'. $hospID .'")';
    if (!mysqli_query($connection, $query)) {
         die("Error: NEW DOC WAS NOT ADDED" . " " .  mysqli_error($connection));
     } else {
