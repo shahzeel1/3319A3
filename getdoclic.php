@@ -10,13 +10,13 @@
 <?php
    include 'connecttodb.php';
 ?>
-    
+<ul>    
 <?php
     if (isset($_POST['enter'])) 
 {
    $licDate= $_POST["licdate"];    
 echo"<h1>Doctor's Licensed Before".$licDate."</h1>";
-<ul>
+
    $query1= 'SELECT * FROM doctor WHERE licenseDate < "' .$licDate. '"';
    $result=mysqli_query($connection,$query1);
    if (!$result) {
