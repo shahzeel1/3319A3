@@ -49,8 +49,11 @@
 	echo "<input type='submit' name='$licNum' value='Delete the Doc'>";
 	echo "</form>"; 
 }
-   mysqli_close($connection);
+   
     }
+        mysqli_close($connection);
+        
 ?>
+    </ol>
 </body>
 </html>
