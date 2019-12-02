@@ -10,7 +10,10 @@
 <?php
    include 'connecttodb.php';
 ?>
+    
 <?php
+    if (isset($_POST['enter'])) 
+{
    $licDate= $_POST["licdate"];    
 echo"<h1>Doctor's Licensed Before".$licDate."</h1>";
 <ul>
@@ -25,6 +28,7 @@ echo"<h1>Doctor's Licensed Before".$licDate."</h1>";
      }
    mysqli_close($connection);
 ?>
+    }
 </ul>
 </body>
 </html>
