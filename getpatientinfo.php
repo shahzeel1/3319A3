@@ -15,11 +15,11 @@
 <ul>
 <?php
    $ohip= $_POST["ohip"];
-
+   $ohipint= (int)$ohip    
 try 
 {
-   
-   $query= 'SELECT patient.firstname AS p_fname, patient.lastname AS p_lname, patient.ohip AS p_OHIP, doctor.firstName AS d_fname, doctor.lastName AS d_lname  FROM patient,treats,doctor  WHERE patient.ohip='.$ohip. 'AND treats.ohip='.$ohip.'AND treats.docLicNum=doctor.docLicNum;';
+   echo $ohip;
+   $query= 'SELECT patient.firstname AS p_fname, patient.lastname AS p_lname, patient.ohip AS p_OHIP, doctor.firstName AS d_fname, doctor.lastName AS d_lname  FROM patient,treats,doctor  WHERE patient.ohip='.$ohipint. 'AND treats.ohip='.$ohipint.'AND treats.docLicNum=doctor.docLicNum;';
    $result=mysqli_query($connection,$query);
    if (!$result) {
           die("Database query failed.");
