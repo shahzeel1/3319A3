@@ -19,7 +19,7 @@
    $fName= $_POST["fname"];// doc first name
    $lName = $_POST["lname"];// doc last name 
    $licNum = $_POST["licNum"];// doc license num
-   $query1= 'SELECT * FROM doctor WHERE doctor.docLicNum="' . $licNum . '" AND doctor.firstName = "' . $fName . '" AND doctor.lastName = "'. $lName .'"'; // get query to see if the doc is in the database
+   $query1= 'SELECT * FROM doctor WHERE doctor.docLicNum="' . $licNum . '" AND doctor.firstName = "' . $fName . '" AND doctor.lastName = "'. $lName .'";'; // get query to see if the doc is in the database
    $result=mysqli_query($connection,$query1); // send the query into the db
    // f there are no results the doc doesn't exist
     if (mysqli_num_rows($result)==0) {
