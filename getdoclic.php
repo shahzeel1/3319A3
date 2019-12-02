@@ -14,8 +14,10 @@
 <?php
         $licDate= $_POST["licdate"];
 echo"<h1>Doctor's Licensed Before ".$licDate."</h1>";
-
-   
+$valid = validateDate(licdate, "Y-M-D");
+        
+   if($valid)
+   {
    $query1= 'SELECT * FROM doctor WHERE licenseDate < "' .$licDate. '"';
    $result=mysqli_query($connection,$query1);
    if (!$result) {
@@ -26,6 +28,15 @@ echo"<h1>Doctor's Licensed Before ".$licDate."</h1>";
         echo "<b>Name: </b>" . $row["firstName"] . " " . $row["lastName"] ." " .  "<b>License No.: </b>" . " " . $row["docLicNum"] . " " . "<b>Speciality: </b>" . " " . $row["speciality"] . "</li>"; 
      }
    mysqli_close($connection);
+   }
+        
+    function validateDate($date, $format)
+{
+    $d = DateTime::createFromFormat($format, $date);
+    
+    return $d && $d->format($format) === $date;
+        
+}
 ?>
 </ul>
 </body>
