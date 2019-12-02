@@ -2,7 +2,9 @@
 <html>
 <head>
 	<title>Update Hospital Name</title>
-	<link rel="stylesheet" type="text/css" href="css.css">
+	<link rel="stylesheet" type="text/css" href="doctordb.css">
+	<link href="https://fonts.google.com/specimen/Fjalla+One" rel-"stylesheet">
+	<script src="doctors.js"></script>
 </head>
 <body>
 
