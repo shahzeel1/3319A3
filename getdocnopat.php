@@ -13,7 +13,7 @@ include 'connecttodb.php';
 <h1>These are the doctors with no patients:</h1>
 <ul>
 <?php
-   $query = 'SELECT doctor.firstName AS d_fname, doctor.lastName AS d_lname, treats.ohip FROM treats RIGHT JOIN doctor ON doctor.docLicNum=treats.doctorID WHERE treats.ohip IS NULL';
+   $query = 'SELECT doctor.firstName AS d_fname, doctor.lastName AS d_lname, treats.ohip FROM treats RIGHT JOIN doctor ON doctor.docLicNum=treats.docLicNum WHERE treats.ohip IS NULL';
     $result=mysqli_query($connection,$query);
     if (!$result) {
          die("Database query failed.");
