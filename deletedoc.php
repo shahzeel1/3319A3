@@ -19,7 +19,7 @@
    $fName= $_POST["fname"];
    $lName = $_POST["lname"];
    $licNum = $_POST["licNum"];
-   $query1= 'SELECT * FROM doctor WHERE doctor.doxLicNum="' . $licNum . '" AND doctor.firstName = "' . $fName . '" AND doctor.lastName = "'. $lName .'"';
+   $query1= 'SELECT * FROM doctor WHERE doctor.docLicNum="' . $licNum . '" AND doctor.firstName = "' . $fName . '" AND doctor.lastName = "'. $lName .'"';
    $result=mysqli_query($connection,$query1);
    if (mysqli_num_rows($result)==0) {
           die("The Doctor is not in the database. Try Again.");

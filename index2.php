@@ -54,7 +54,7 @@
     </p>
   </form>
   <form action="adddoc.php" enctype="multipart/form-data" method="post">
-    <h3 action="adddoc.php" enctype="multipart/form-data" method="post" style="text-align: center;">
+    <h3 style="text-align: center;">
       <br>
     </h3>
     <h3 action="adddoc.php" enctype="multipart/form-data" method="post" style="text-align: center;">Add a New Doctor</h3>
@@ -104,19 +104,27 @@
       <input type="submit" value="Delete Doctor">
     </p>
   </form>
-  <form action="updatehospital.php" method="post">
-    <br><u>Update a Hospital Name:</u>
+    <form action="updatehospname.php" method="post" style="text-align: center;">
+  <h3 style="text-align: center;">
+    <br>Update a Hospital Name:
+  </h3>
+  <p>
     <br>
-    <br>Victoria, London ON: 
-    <input type="radio" name="hospital" value="ABC">
+  </p>
+  <p>
     <br>St. Joseph's, London ON: 
-    <input type="radio" name="hospital" value="BBC">
+    <input type="radio" name="hosp" value="BBC">
+    <br>Victoria, London ON: 
+    <input type="radio" name="hosp" value="ABC">  
     <br>Victoria, Victoria BC: 
-    <input type="radio" name="hospital" value="DDE">
+    <input type="radio" name="hosp" value="DDE">
+  </p>
+  <p>
     <br>What did you want to change the name to?
     <br>
     <input type="text" name="hospName" value=""> 
     <input type="submit" name="submit" value="Update Hospital Name">
+  </p>
   </form>
   <hr>
   <form action="headdoctor.php" method="post">
