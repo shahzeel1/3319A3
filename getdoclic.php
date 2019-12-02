@@ -27,9 +27,9 @@ $valid = validateDate($licDate); // make sure thr date is valid
 
           die("Query failed.");
    }
-    while ($row=mysqli_fetch_assoc($result)) { // output all the doctors' first name, last name, license num, and speciality 
+    while ($row=mysqli_fetch_assoc($result)) { // output all the doctors' first name, last name, license num, and speciality and iicense date 
         echo '<li>';
-        echo "<b>Name: </b>" . $row["firstName"] . " " . $row["lastName"] ." " .  "<b>License No.: </b>" . " " . $row["docLicNum"] . " " . "<b>Speciality: </b>" . " " . $row["speciality"] . "</li>"; 
+        echo "<b>Name: </b>" . $row["firstName"] . " " . $row["lastName"] ." " .  "<b>License No.: </b>" . " " . $row["docLicNum"] . " ". "<b>License Date: </b>" . " " . $row["licenseDate"] . " " . "<b>Speciality: </b>" . " " . $row["speciality"] . "</li>"; 
      }
    mysqli_close($connection); // clsoe the connection to the db
 
