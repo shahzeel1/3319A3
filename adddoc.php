@@ -24,7 +24,7 @@
        $valid = validateDate($licDate); // make sure thr date is valid 
     if($valid)
     {
-   $query = 'INSERT INTO doctor values("' . $licNum . '","' . $docfName . '","' . $doclName . '","' . $spec . '", "' . $licDate . '", "'. $hospID .'")'; // get the query to add the doc
+   $query = 'INSERT INTO doctor values("' . $licNum . '","' . $dfName . '","' . $dlName . '","' . $spec . '", "' . $licDate . '", "'. $hospID .'")'; // get the query to add the doc
    if (!mysqli_query($connection, $query))// test query in the db {
         die("Error: NEW DOC WAS NOT ADDED LICENSE NUM ALREADY EXISTS" . " " .  mysqli_error($connection));
      else {
