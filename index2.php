@@ -147,16 +147,16 @@
       <input type="submit" value="Get Patient Info">
     </p>
     </form>
-  <form action="updatepatientlist.php" method="post">
+  <form action="assigndoc.php" method="post">
     <h3 style="text-align: center;">Add/Remove Doctor to a Patient</h3>
   <p style="text-align: left;">DoctorID: 
     <input type="text" name="doc" value="">
     <br>PatientID: 
-    <input type="text" name="doc" value="">
+    <input type="text" name="ohip" value="">
   </p>
   <p style="text-align: left;">Add or Remove? 
-    <input type="submit" name="submitAssign" value="Add"> 
-    <input type="submit" name="submitRemove" value="Remove">
+    <input type="submit" name="add" value="Add"> 
+    <input type="submit" name="remove" value="Remove">
   </p>
   <hr>
   <form action="getdocnopatients.php" method="post">
