@@ -111,7 +111,7 @@
   <p>
     <br>
   </p>
-  <p>
+  <p style="text-align: left;">
     <br>St. Joseph's, London ON: 
     <input type="radio" name="hosp" value="BBC">
     <br>Victoria, London ON: 
