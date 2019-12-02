@@ -158,12 +158,13 @@
     <input type="submit" name="add" value="Add"> 
     <input type="submit" name="remove" value="Remove">
   </p>
-  <hr>
-  <form action="getdocnopatients.php" method="post">
-    <br><u>List All Doctors With no Patients:</u>
-    <br>
-    <br>
-    <input type="submit" name="submit" value="List">
+    </form>
+    <form action="getdocnopat.php" method="post" >
+   <h3 style="text-align: center;">List Doctors with No Patients</h3>
+    <p style="text-align: center;">
+      <br>
+      <input type="submit" name="submit" value="Check it out">
+    </p>
   </form>
   
   <form action="updatedocpic.php" enctype="multipart/form-data" method="post"><u>Add a Doctor's Missing Image:</u>
