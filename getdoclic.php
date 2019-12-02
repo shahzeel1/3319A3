@@ -13,8 +13,9 @@
     <ul>
 <?php
         $licDate= $_POST["licdate"];
+
 echo"<h1>Doctor's Licensed Before ".$licDate."</h1>";
-$valid = validateDate(licdate, "Y-M-D");
+$valid = validateDate($licDate);
         
    if($valid)
    {
@@ -29,12 +30,15 @@ $valid = validateDate(licdate, "Y-M-D");
      }
    mysqli_close($connection);
    }
-        
-    function validateDate($date, $format)
+else 
+{
+echo "Invalid Date Entry";
+}        
+    function validateDate($date, $format='Y-m-d')
 {
     $d = DateTime::createFromFormat($format, $date);
     
-    return $d && $d->format($format) === $date;
+    return $d && $d->format($format) == $date;
         
 }
 ?>
