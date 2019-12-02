@@ -14,7 +14,7 @@
 <h1>Delete a Doctor:</h1>
 <ol>
 <?php
-   session_start();
+   
    $_SESSION['var'] = $_POST["licNum"];
    $fName= $_POST["fname"];
    $lName = $_POST["lname"];
