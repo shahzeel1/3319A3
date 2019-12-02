@@ -25,11 +25,11 @@ if (isset($_POST["add"])) {
 }
 if (isset($_POST["remove"])) {  
    $query1 = 'ALTER TABLE treats DISABLE KEYS';
-   $query2 = 'DELETE  FROM treats WHERE ohip="'. $patientID .'" AND docLicNum="'. $licenseNum .'"';
+   $query2 = 'DELETE  FROM treats WHERE ohip="'. $ohip .'" AND docLicNum="'. $licNum .'"';
    $query3 = 'ALTER TABLE treats ENABLE KEYS';
    if (!mysqli_query($connection, $query2)) {
 	die("Error: Connection was not removed " . mysqli_error($connection));
-    } else {echo "Doctor removed! from the patient"; }
+    } else {echo "Doctor removed from the patient"; }
 }
    mysqli_close($connection);
 ?>
