@@ -55,7 +55,7 @@
     <br>
     <br>Want a Doctor who was licensed before a certain date? 
   </h3>
-  <p >">Enter the license date in this format: YYYY-MM-DD</p>
+  <p action="getdoclic.php" method="post" style="text-align: center;">Enter the license date in this format: YYYY-MM-DD</p>
   <p action="getdoclic.php" method="post" style="text-align: center;">
     <br>
     <input type="text" name="licdate" value="" class="fr-rounded">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 
