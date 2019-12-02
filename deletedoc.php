@@ -14,7 +14,10 @@
 <h1>Delete a Doctor:</h1>
 <ol>
 <?php
-    session_start(); // saves the position this file is at
+   if (isset($_POST['enter'])) 
+   {
+    
+     session_start(); // saves the position this file is at
    // inputs from the user
    $fName= $_POST["fname"];// doc first name
    $lName = $_POST["lname"];// doc last name 
@@ -26,8 +29,8 @@
           die("The Doctor is not in the database. Try Again.");
    }
     else{
-   try {
-    $query1 ='SELECT * FROM treats WHERE doctor.docLicNum="'.$licNum'";';
+   
+    $query1 ='SELECT * FROM treats WHERE doctor.docLicNum="'.$licNum.'";';
        $result = mysqli_query($connection, $query1);
        if ($result)
        {
@@ -45,14 +48,34 @@
         // make sure the doc has to be deleted 
         else {
 	echo "Are you sure you want to delete a doctor that treats patients right now?";
-	echo "<form action='cascdeletedoc.php' method='post'>";
-	echo "<input type='submit' name='$licNum' value='Delete the Doc'>";
+	echo "<form action='deletedoc.php' method='post'>";
+    echo '<p>First Name: 
+      <input type="text" name="fname" value="'.$fName.'">
+      <br>Last Name: 
+      <input type="text" name="lname" value="'.$lName.'"> 
+      <br>License Number (ex. HW10): 
+      <input type="text" name="licNum" value="'.$licNum.'">
+    </p>';        
+	echo "<input type='submit' name='yes' value='Yes Delete the Doc'>";
 	echo "</form>"; 
 }
    
     }
-        mysqli_close($connection);
+   }
+    if (isset($_POST['yes']))
+    {
+         $fName= $_POST["fname"];// doc first name
+   $lName = $_POST["lname"];// doc last name 
+   $licNum = $_POST["licNum"];// doc license num
         
+        $query = 'DELETE FROM doctor WHERE doctor.docLicNum="' . $licNum . '" AND doctor.firstName = "' . $fName . '" AND doctor.lastName = "'. $lName .'"'; // delete teh doctor
+       $mysqli_query($connection, $query);
+    }
+    
+    
+    
+        mysqli_close($connection);
+    
 ?>
     </ol>
 </body>
