@@ -107,7 +107,7 @@
       <input type="text" name="licNum" value=""><!-- License Num Text Box-->
     </p>
     <p>
-      <input type="submit" value="Delete Doctor"><!-- Delete Button-->
+      <input type="submit" name = "enter" value="Delete Doctor"><!-- Delete Button-->
     </p>
   </form>
     
