@@ -45,45 +45,44 @@
     </table>
   </form>
     
-    
-  <form action="getdoclic.php" method="post">
+<!-- Get the doc before a certain date-->    
+  <form action="getdoclic.php" method="post"><!-- go to the doc license info page-->
     <h3 style="text-align: center;">
       <br>
       <br>Want a Doctor who was licensed before a certain date?
     </h3>
     <p style="text-align: center;">Enter the license date in this format: YYYY-MM-DD
       <br>
+        <!--Text box and then the submit button-->
       <input type="text" name="licdate" value="">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 
       <input type="submit" value="Get Doctor">
     </p>
   </form>
-  <form action="adddoc.php" enctype="multipart/form-data" method="post">
+    
+    <!-- Add a new doc-->
+  <form action="adddoc.php" enctype="multipart/form-data" method="post"><!-- Go to add doc page-->
     <h3 style="text-align: center;">
       <br>
     </h3>
-    <h3 action="adddoc.php" enctype="multipart/form-data" method="post" style="text-align: center;">Add a New Doctor</h3>
+    <h3 style="text-align: center;">Add a New Doctor</h3>
     <p>First Name: 
-      <input type="text" name="fName" value="">
+      <input type="text" name="fName" value=""><!--Text Input Box-->
       <br>Last Name: 
-      <input type="text" name="lName" value="">
+      <input type="text" name="lName" value=""><!--Text Input Box-->
       <br>Specialty: 
-      <input type="text" name="spec" value="">
+      <input type="text" name="spec" value=""><!--Text Input Box-->
       <br>License Number (ex. HW10): 
-      <input type="text" name="licNum" value="">
+      <input type="text" name="licNum" value=""><!--Text Input Box-->
       <br>License Date (YYYY-MM-DD): 
-      <input type="text" name="licDate" value="">
+      <input type="text" name="licDate" value=""><!--Text Input Box-->
       <br>
-      <br>Hospital:
+      <br>Hospital: <!-- select the hospital the doc works at (St.Joes is auto checked) --> 
       <br>
       <input type="radio" name="hosp" value="BBC" checked="checked">St.Joseph, London ON
       <br>
       <input type="radio" name="hosp" value="ABC">Victoria, London ON
       <br>
       <input type="radio" name="hospl" value="DDE">Victoria, Victoria BC
-      <br>Add Doctor's Image:
-      <br>
-      <input type="file" name="file" id="file" value="">
-      <br>
       <input type="submit" value="Add Doctor">
     </p>
   </form>
