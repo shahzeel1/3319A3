@@ -53,8 +53,10 @@
 </form>
     
 <form action="getdoclic.php" method="post">
-<br>
-<u>Get Doctor Qualified  Before License Date:</u>
+<h3 style="text-align: center;">
+    <br>
+    <br>Want a Doctor who was licensed before a certain date? 
+  </h3>
 <p>Enter the date in this format: 1998-20-30
 <br>
 License Date: <input type="text" name="licdate">
