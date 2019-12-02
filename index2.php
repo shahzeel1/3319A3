@@ -64,30 +64,33 @@
 </form>
 
 <form action="addnewdoc.php" method="post" enctype="multipart/form-data">
-<br>
-<u>Add a New Doctor:</u>
-<br>
-<br>
-First Name: <input type="text" name="fname">
-<br>
-Last Name: <input type="text" name="lname">
-<br>
-Specialty: <input type="text" name="spec">
-<br>
-License Date (ex. 2000-20-20): <input type="text" name="licDate">
-<br>
-License Number (ex. HW10): <input type="text" name="licNum">
-<br>
-Hospital:<br>
-<input type="radio" name="hospital" value="ABC">Victoria, London ON<br>
-<input type="radio" name="hospital" value="BBC">St.Joseph, London ON<br>
-<input type="radio" name="hospital" value="DDE">Victoria, Victoria BC<br>
-Add Doctor's Image:<br>
-<input type="file" name="file" id="file"><br>
-<input type="submit" value="Add Doctor">
+<h3 action="addnewdoc.php" enctype="multipart/form-data" method="post" style="text-align: left;">First Name: 
+    <input type="text" name="fname" value="">
+    <br>Last Name: 
+    <input type="text" name="lname" value="">
+    <br>Specialty: 
+    <input type="text" name="spec" value="">
+    <br>License Number (ex. HW10): 
+    <input type="text" name="licNum" value="">
+    <br>License Date (ex. 2000-20-20): 
+    <input type="text" name="licDate" value="">
+    <br>
+    <br>Hospital:
+    <br>
+    <input type="radio" name="hospital" value="BBC">St.Joseph, London ON
+    <br>
+    <input type="radio" name="hospital" value="ABC">Victoria, London ON
+    <br>
+    <input type="radio" name="hospital" value="DDE">Victoria, Victoria BC
+    <br>Add Doctor's Image:
+    <br>
+    <input type="file" name="file" id="file" value="">
+    <br>
+    <input type="submit" value="Add Doctor" disabled="disabled">
+  </h3>
 </form>
 
-<hr>
+    
 <form action="deletedoc.php" method="post">
 <br>
 <u>Delete a Doctor:</u>
