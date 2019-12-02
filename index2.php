@@ -166,18 +166,5 @@
       <input type="submit" name="submit" value="Check it out">
     </p>
   </form>
-  
-  <form action="updatedocpic.php" enctype="multipart/form-data" method="post"><u>Add a Doctor's Missing Image:</u>
-    <br><!--?php
-   include 'uploaddocpic.php';
-   include 'adddocpic.php';
-?--> 
-    <input type="file" name="file" id="file" value="">
-    <br>
-    <input type="submit" name="submitImage" value="Add Picture"> <!--?php
-mysqli_close($connection);
-?-->
-  </form>
-  <hr>
 </body>
 </html>
