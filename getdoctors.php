@@ -1,4 +1,4 @@
-// This page displays the doctors in the order that the user selected-->
+<!--This page displays the doctors in the order that the user selected-->
 <!DOCTYPE html>
 <html>
 <head>
