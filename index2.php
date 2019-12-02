@@ -126,12 +126,14 @@
     <input type="submit" name="submit" value="Update Hospital Name">
   </p>
   </form>
-  <hr>
-  <form action="headdoctor.php" method="post">
-    <br><u>List All Head Doctors and Their Start Date for Each Hospital in Alphabetical Order:</u>
-    <br>
-    <br>
-    <input type="submit" name="submit" value="List">
+  <form action="hosplist.php" method="post">
+      <h3 style="text-align: center;"> 
+    <br>Hospital Info List 
+     </h3>
+    <p style="text-align: center;">
+      <br> 
+    <input type="submit" name="submit" value="Check it out">  
+  </p> 
   </form>
   <hr>
   <form action="getpatientbyohip.php" method="post">
