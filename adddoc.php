@@ -27,16 +27,18 @@
    $query = 'INSERT INTO doctor values("' . $licNum . '","' . $docfName . '","' . $doclName . '","' . $spec . '", "' . $licDate . '", "'. $hospID .'")'; // get the query to add the doc
    if (!mysqli_query($connection, $query))// test query in the db {
         die("Error: NEW DOC WAS NOT ADDED LICENSE NUM ALREADY EXISTS" . " " .  mysqli_error($connection));
-    } else {
+     else {
    echo "A NEW DOC WAS ADDED!";
    }
-        
-   mysqli_close($connection); // close the connection to the db
-   }
-       else 
+    }
+        else 
        {
            echo "Error: The date entered was not of the correct format";
        }
+        
+   mysqli_close($connection); // close the connection to the db
+   
+      
    }
     else 
     {

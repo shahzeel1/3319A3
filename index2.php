@@ -71,7 +71,7 @@
       <input type="text" name="lName" value=""><!--Text Input Box-->
       <br>Specialty: 
       <input type="text" name="spec" value=""><!--Text Input Box-->
-      <br>License Number (ex. HW10): 
+      <br>License Number (ex. SD98): 
       <input type="text" name="licNum" value=""><!--Text Input Box-->
       <br>License Date (YYYY-MM-DD): 
       <input type="text" name="licDate" value=""><!--Text Input Box-->
