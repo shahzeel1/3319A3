@@ -57,9 +57,9 @@
     <br>
     <br>Want a Doctor who was licensed before a certain date? 
   </h3>
-<p>Enter the license date in this format: YYYY-MM-DD
+<p style="text-align: center;">Enter the license date in this format: YYYY-MM-DD
 <br>
-<input type="text" name="licdate">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 
+<input type="text" name="licdate" >&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 
     <input type="submit" value="Get Doctor">
 </form>
 
