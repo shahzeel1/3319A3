@@ -42,23 +42,21 @@
         <td style="width: 24.9624%;">
             <div data-empty="true" style="text-align: center;">
               <br>
-              <input name="enter" type="submit" value="Get Doctors">
+              <input name="enter" type="submit" value="Get Doctors" class = "fr-rounded">
             </div>
           </td>
     </tr>
   </tbody>
 </table>
 
-<?php include'getdoctors.php'; ?>    
-<input name="enter" type="submit" value="Get Doctors" class="fr-rounded">
+<?php include'getdoctors.php'; ?>   
 </form>
-
-<h3 action="getdocfromlicense.php" method="post" style="text-align: center;">
+<h3 action="getdoclic.php" method="post" style="text-align: center;">
     <br>
     <br>Want a Doctor who was licensed before a certain date? 
   </h3>
-  <p action="getdocfromlicense.php" method="post" style="text-align: left;">Enter the license date in this format: YYYY-MM-DD</p>
-  <p action="getdocfromlicense.php" method="post" style="text-align: left;">
+  <p >">Enter the license date in this format: YYYY-MM-DD</p>
+  <p action="getdoclic.php" method="post" style="text-align: center;">
     <br>
     <input type="text" name="licdate" value="" class="fr-rounded">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 
     <input type="submit" value="Get Doctor" class="fr-rounded">
