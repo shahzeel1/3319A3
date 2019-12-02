@@ -86,8 +86,10 @@
       <input type="submit" value="Add Doctor">
     </p>
   </form>
-  <form action="deletedoc.php" method="post">
-    <h3 action="deletedoc.php" method="post" style="text-align: center;">
+    
+    <!-- Delete the Doctor inputed by  the user -->
+  <form action="deletedoc.php" method="post"><!-- call delete doc page-->
+    <h3 style="text-align: center;">
       <br>Delete a Doctor:
     </h3>
     <p>
@@ -97,16 +99,17 @@
       <br>
     </p>
     <p>First Name: 
-      <input type="text" name="fname" value="">
+      <input type="text" name="fname" value=""> <!-- Doctor Name Input Text Box-->
       <br>Last Name: 
-      <input type="text" name="lname" value="">
+      <input type="text" name="lname" value=""> 
       <br>License Number (ex. HW10): 
-      <input type="text" name="licNum" value="">
+      <input type="text" name="licNum" value=""><!-- License Num Text Box-->
     </p>
     <p>
-      <input type="submit" value="Delete Doctor">
+      <input type="submit" value="Delete Doctor"><!-- Delete Button-->
     </p>
   </form>
+    
     <form action="updatehospname.php" method="post" style="text-align: center;">
   <h3 style="text-align: center;">
     <br>Update a Hospital Name:

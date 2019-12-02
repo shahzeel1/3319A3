@@ -1,15 +1,15 @@
+
+<!-- Delete the doc specified by the user-->
 <!DOCTYPE html>
 <html>
 <head>
 	<title>Delete A Doc</title>
 	<link rel="stylesheet" type="text/css" href="doctordb.css">
-	<link href="https://fonts.google.com/specimen/Fjalla+One" rel-"stylesheet">
-	<script src="doctors.js"></script>
 </head>
 <body>
 
 <?php
-   include 'connecttodb.php';
+   include 'connecttodb.php';// connect to the db
 ?>
 <h1>Delete a Doctor:</h1>
 <ol>
