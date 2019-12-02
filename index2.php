@@ -3,7 +3,7 @@
 <head>
   <title>Zeel's Doctor's Database</title>
   <link rel="stylesheet" type="text/css" href="doctordb.css">
-  <link href="https://fonts.google.com/specimen/Fjalla+One">
+ <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
   <script src="doctors.js"></script>
 </head>
 <body>
