@@ -24,7 +24,7 @@ if ($order == "First Name A-Z")
     echo '<form 
 action="getdocdata.php" method="post">';// call the doctor info page-->
    $query = "SELECT * FROM doctor ORDER BY firstName ASC";
-   $result = mysqli_query($connection,$query);<!- send in the query to the db-->
+   $result = mysqli_query($connection,$query);// send in the query to the db-->
    // no result means the query failed-->
     if (!$result) {
         die("Databases query failed.");
