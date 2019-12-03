@@ -100,7 +100,7 @@
    }
          while ($row=mysqli_fetch_assoc($result)) {
         echo "<p style='text-align: left;'>";
-        echo "<br>".$row["name"] . " " . $row["city"] ." ". $row["province"]; // display the name and location of the hospital
+        echo $row["name"] . " " . $row["city"] ." ". $row["province"]; // display the name and location of the hospital
         echo"<input type='radio' name='hosp' value='".$row["hosCode"]."'>" ;
         echo"</p>"; 
         
