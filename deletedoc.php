@@ -21,9 +21,9 @@
    $lName = $_POST["lname"];// doc last name 
    $licNum = $_POST["licNum"];// doc license num
   
-    $SESSION ['fname']= $fName;
-    $SESSION ['lname']= $lName;
-    $SESSION ['licNum']= $licNum;
+    $_SESSION ['fname']= $fName;
+    $_SESSION ['lname']= $lName;
+    $_SESSION ['licNum']= $licNum;
     
     $query1= 'SELECT * FROM doctor WHERE doctor.docLicNum="' . $licNum . '" AND doctor.firstName = "' . $fName . '" AND doctor.lastName = "'. $lName .'";'; // get query to see if the doc is in the database
    $result=mysqli_query($connection,$query1); // send the query into the db

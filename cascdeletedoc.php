@@ -15,10 +15,10 @@ include 'connecttodb.php';
 <ol>
 <?php
    session_start();
-    $fname = $SESSION ['fname'];
-    $lname = $SESSION ['lname'];
-    $licNum = $SESSION ['licNum'];
-    
+    $fname = $_SESSION ['fname'];
+    $lname = $_SESSION ['lname'];
+    $licNum = $_SESSION ['licNum'];
+    var_dump($licNum);
       $query = 'DELETE FROM doctor WHERE doctor.docLicNum="' . $licNum . '" AND doctor.firstName = "' . $fName . '" AND doctor.lastName = "'. $lName .'";'; // delete teh doctor
        $result2 = mysqli_query($connection, $query);
    
