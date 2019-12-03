@@ -9,7 +9,7 @@
 
 <?php
 include 'connecttodb.php';
-include 'deletedoc.php';    
+    
 ?>
 <h1>Delete a Doctor:</h1>
 <ol>
