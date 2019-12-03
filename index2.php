@@ -88,7 +88,7 @@
             </div>
           </td>
           <td style="width: 35.8858%;">
-            <div style="text-align: left;">
+            
               <br>
               <?php
     include 'connecttodb.php';// connect to db
@@ -110,7 +110,7 @@
     
 ?> 
               <input type="submit" value="Add Doctor">
-            </div>
+            
           </td>
         </tr>
       </tbody>
