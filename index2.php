@@ -111,13 +111,14 @@
     </p>
   </form>
     
-    <form action="updatehospname.php" method="post" style="text-align: center;">
+    <!-- Update the hospital name-->
+    <form action="updatehospname.php" method="post" style="text-align: center;"><!-- go to the updatehospname.php-->
   <h3 style="text-align: center;">
     <br>Update a Hospital Name:
   </h3>
   <p>
     <br>
-  </p>
+  </p> <!-- pick the name you want to update-->
   <p style="text-align: left;">
     <br>St. Joseph's, London ON: 
     <input type="radio" name="hosp" value="BBC">
@@ -133,6 +134,8 @@
     <input type="submit" name="submit" value="Update Hospital Name">
   </p>
   </form>
+    
+    <!--Get the hospital's info--> 
   <form action="hosplist.php" method="post">
       <h3 style="text-align: center;"> 
     <br>Hospital Info List 
@@ -143,6 +146,7 @@
   </p> 
   </form>
   
+<!-- Get the patients info based on their ohip -->    
   <form action="getpatientinfo.php" method="post" >
       <h3 style="text-align: center;">
     <br>Get Patient Info
@@ -154,17 +158,21 @@
       <input type="submit" value="Get Patient Info">
     </p>
     </form>
+    
+<!-- Assign/Remove a adoc from a patient-->    
   <form action="assigndoc.php" method="post">
     <h3 style="text-align: center;">Add/Remove Doctor to a Patient</h3>
-  <p style="text-align: left;">DoctorID: 
+  <p style="text-align: left;">DoctorID: <!-- doc license num-->
     <input type="text" name="doc" value="">
-    <br>PatientID: 
+    <br>PatientID: <!-- ohip num -->
     <input type="text" name="ohip" value="">
   </p>
-  <p style="text-align: left;">Add or Remove? 
+  <p style="text-align: left;">Add or Remove? <!-- Prompt user to pick a button-->
     <input type="submit" name="add" value="Add"> 
     <input type="submit" name="remove" value="Remove">
   </p>
+      
+      <!-- get docs with no patients-->
     </form>
     <form action="getdocnopat.php" method="post" >
    <h3 style="text-align: center;">List Doctors with No Patients</h3>
