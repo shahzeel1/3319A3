@@ -60,50 +60,48 @@
   </form>
     
     <!-- Add a new doc-->
-  <form action="adddoc.php" enctype="multipart/form-data" method="post"><!-- Go to add doc page-->
+    <form action="adddoc.php" enctype="multipart/form-data" method="post"><!-- Go to add doc page-->
     <br>
     <h3 style="text-align: center;">Add a New Doctor</h3>
     <table style="width: 100%;">
-    <tbody> 
-    <tr>
-         <td style="width: 63.964%;">
+      <tbody>
+        <tr>
+          <td style="width: 63.964%;">
             <div style="text-align: center;"><strong>Info</strong></div>
           </td>
-         <td style="width: 35.8858%;">
-            <div style="text-align: center;"><strong>Hospital</strong></div><!-- select the hospital the doc works at (St.Joes is auto checked) -->
-          </td>
-        </tr> 
-        <tr>
-         <td style="width: 63.964%;">
-            <div style="text-align: center;">First Name: 
-      <input type="text" name="fName" value=""><!--Text Input Box-->
-      <br>Last Name: 
-      <input type="text" name="lName" value=""><!--Text Input Box-->
-      <br>Specialty: 
-      <input type="text" name="spec" value=""><!--Text Input Box-->
-      <br>License Number (ex. SD98): 
-      <input type="text" name="licNum" value=""><!--Text Input Box-->
-      <br>License Date (YYYY-MM-DD): 
-      <input type="text" name="licDate" value=""><!--Text Input Box-->
-      <br></div>
-          </td>
-            <td style="width: 35.8858%;">
-            <div style="text-align: left;">  
-      <br>
-      <input type="radio" name="hosp" value="BBC" checked="checked">St.Joseph, London ON
-      <br>
-      <input type="radio" name="hosp" value="ABC">Victoria, London ON
-      <br>
-      <input type="radio" name="hospl" value="DDE">Victoria, Victoria BC
-    <br>    
-      <input type="submit" value="Add Doctor"></div>
+          <td style="width: 35.8858%;">
+            <div style="text-align: left;"><strong>Hospital</strong></div><!-- select the hospital the doc works at (St.Joes is auto checked) -->
           </td>
         </tr>
-    
-     
-    
-        </tbody>
-      </table>    
+        <tr>
+          <td style="width: 63.964%;">
+            <div style="text-align: center;">First Name:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
+              <input type="text" name="fName" value=""><!--Text Input Box-->
+              <br>Last Name:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+              <input type="text" name="lName" value=""><!--Text Input Box-->
+              <br>Specialty:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+              <input type="text" name="spec" value=""><!--Text Input Box-->
+              <br>License Number (ex. SD98):&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+              <input type="text" name="licNum" value=""><!--Text Input Box-->
+              <br>License Date (YYYY-MM-DD):&nbsp; &nbsp;
+              <input type="text" name="licDate" value=""><!--Text Input Box-->
+            </div>
+          </td>
+          <td style="width: 35.8858%;">
+            <div style="text-align: left;">
+              <br>
+              <input type="radio" name="hosp" value="BBC" checked="checked">St.Joseph, London ON
+              <br>
+              <input type="radio" name="hosp" value="ABC">Victoria, London ON
+              <br>
+              <input type="radio" name="hospl" value="DDE">Victoria, Victoria BC
+              <br>
+              <input type="submit" value="Add Doctor">
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
   </form>
     
     <!-- Delete the Doctor inputed by  the user -->
