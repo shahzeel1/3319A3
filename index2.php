@@ -119,14 +119,26 @@
   <p>
     <br>
   </p> <!-- pick the name you want to update-->
-  <p style="text-align: left;">
-    <br>St. Joseph's, London ON: 
-    <input type="radio" name="hosp" value="BBC">
-    <br>Victoria, London ON: 
-    <input type="radio" name="hosp" value="ABC">  
-    <br>Victoria, Victoria BC: 
-    <input type="radio" name="hosp" value="DDE">
-  </p>
+<?php>
+    include 'connecttodb.php';
+    
+    $query = ' SELECT name, province, city, hosCode FROM hospital;'; //get's info of the doctor specified by the user
+    $result=mysqli_query($connection,$query);// send query into the db 
+    if (!$result) {
+          die("Database Query Fail");
+   }
+         while ($row=mysqli_fetch_assoc($result)) {
+        
+        echo "<p style='text-align: left;'>";
+        echo "<br>".$row["name"] . " " . $row["city"] ." ". $row["province"];
+        echo"<input type='radio' name='hosp' value='".["hosCode"].">" ;
+        echo"</p>"; 
+        
+     }
+  
+     mysqli_close($connection);
+    
+ ?>
   <p style="text-align: left;">
     <br>What did you want to change the name to?
     <br>
