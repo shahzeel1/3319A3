@@ -83,19 +83,32 @@
               <input type="text" name="spec" value=""><!--Text Input Box-->
               <br>License Number (ex. SD98):&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
               <input type="text" name="licNum" value=""><!--Text Input Box-->
-              <br>License Date (YYYY-MM-DD):&nbsp; &nbsp;
+              <br>License Date (YYYY-MM-DD):&nbsp; &nbsp; &nbsp;
               <input type="text" name="licDate" value=""><!--Text Input Box-->
             </div>
           </td>
           <td style="width: 35.8858%;">
             <div style="text-align: left;">
               <br>
-              <input type="radio" name="hosp" value="BBC" checked="checked">St.Joseph, London ON
-              <br>
-              <input type="radio" name="hosp" value="ABC">Victoria, London ON
-              <br>
-              <input type="radio" name="hospl" value="DDE">Victoria, Victoria BC
-              <br>
+              <?php
+    include 'connecttodb.php';// connect to db
+    
+    $query = ' SELECT name, province, city, hosCode FROM hospital;'; //get's info of the doctor specified by the user
+    $result=mysqli_query($connection,$query);// send query into the db 
+    if (!$result) {
+          die("Database Query Fail");
+   }
+         while ($row=mysqli_fetch_assoc($result)) {
+        echo "<p style='text-align: left;'>";
+        echo "<br>".$row["name"] . " " . $row["city"] ." ". $row["province"]; // display the name and location of the hospital
+        echo"<input type='radio' name='hosp' value='".$row["hosCode"]."'>" ;
+        echo"</p>"; 
+        
+     }
+  
+     mysqli_close($connection);
+    
+?> 
               <input type="submit" value="Add Doctor">
             </div>
           </td>

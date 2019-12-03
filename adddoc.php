@@ -18,7 +18,9 @@
    $licDate= $_POST["licDate"];
    $licNum= $_POST["licNum"];
    $hospID= $_POST["hosp"];
-   if($licNum!=NULL)// check to make sure license number was added
+  if($hospID!=NULL)
+    {
+  if($licNum!=NULL)// check to make sure license number was added
    {
     // check to make sure the date is valid 
        $valid = validateDate($licDate); // make sure thr date is valid 
@@ -43,6 +45,11 @@
     else 
     {
         echo "Error: No license num was added";
+    }
+  }
+    else 
+    {
+        echo "Error: No Hospital was selected";
     }
        // fucntion checks if the date format is correct
     function validateDate($date, $format='Y-m-d')
