@@ -14,7 +14,11 @@ include 'deletedoc.php';
 <h1>Delete a Doctor:</h1>
 <ol>
 <?php
-   
+   session_start();
+    $fname = $SESSION ['fname'];
+    $lname = $SESSION ['lname'];
+    $licNum = $SESSION ['licNum'];
+    
       $query = 'DELETE FROM doctor WHERE doctor.docLicNum="' . $licNum . '" AND doctor.firstName = "' . $fName . '" AND doctor.lastName = "'. $lName .'";'; // delete teh doctor
        $result2 = mysqli_query($connection, $query);
    
