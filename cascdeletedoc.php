@@ -3,13 +3,13 @@
 <html>
 <head>
 	<title>Doctor's Database</title>
-	<link rel="stylesheet" type="text/css" href="css.css">
+	<link rel="stylesheet" type="text/css" href="doctordb.css">
 </head>
 <body>
-<script src="js.js"></script>
+
 <?php
 include 'connecttodb.php';
-include 'deletedoc.pho';    
+include 'deletedoc.php';    
 ?>
 <h1>Delete a Doctor:</h1>
 <ol>
