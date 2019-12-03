@@ -119,7 +119,7 @@
   <p>
     <br>
   </p> <!-- pick the name you want to update-->
-<?php>
+<?php
     include 'connecttodb.php';
     
     $query = ' SELECT name, province, city, hosCode FROM hospital;'; //get's info of the doctor specified by the user
@@ -138,15 +138,15 @@
   
      mysqli_close($connection);
     
- ?>
-  <p style="text-align: left;">
+ 
+  echo'<p style="text-align: left;">
     <br>What did you want to change the name to?
     <br>
     <input type="text" name="hospName" value=""> 
     <input type="submit" name="submit" value="Update Hospital Name">
   </p>
-  </form>
-    
+  </form>'
+?> 
     <!--Get the hospital's info--> 
   <form action="hosplist.php" method="post">
       <h3 style="text-align: center;"> 
