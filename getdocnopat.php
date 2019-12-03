@@ -13,15 +13,16 @@ include 'connecttodb.php';// connect to the db
 <ul>
 <?php
     // query gets the first, last name of the doc and the patient they "treat" is NULL aks they don't have any patients
-   $query = 'SELECT doctor.firstName, doctor.lastName, treats.ohip FROM treats RIGHT JOIN doctor ON doctor.docLicNum=treats.docLicNum WHERE treats.ohip IS NULL;';
+   $query = 'SELECT doctor.firstName AS f_name, doctor.lastName AS l_name, treats.ohip FROM treats RIGHT JOIN doctor ON doctor.docLicNum=treats.docLicNum WHERE treats.ohip IS NULL;';
     $result=mysqli_query($connection,$query);
     if (!$result) {
          die("Database query failed.");
      }
+
     // list all the doc's first and last name
     while ($row=mysqli_fetch_assoc($result)) {
         echo "<li>";
-        echo "<b>Doctor Name: </b>" . " " . $row["doctor.firstName"] . " " . $row["doctor.lastName"] . "</li>";
+        echo "<b>Doctor Name: </b>" . " " . $row["f_name"] . " " . $row["l_name"] . "</li>";
      }
      mysqli_free_result($result);
 ?>
