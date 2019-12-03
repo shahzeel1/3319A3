@@ -22,7 +22,7 @@ include 'connecttodb.php';
       $query = 'DELETE FROM doctor WHERE doctor.docLicNum="' . $licNum . '" AND doctor.firstName = "' . $fName . '" AND doctor.lastName = "'. $lName .'";'; // delete teh doctor
        $result2 = mysqli_query($connection, $query);
    
-           if ($result2) {
+           if (!$result2) {
 	die("Error: Unable to Delete Doctor " . mysqli_error($connection));
     } 
     else {
