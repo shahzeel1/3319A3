@@ -1,43 +1,48 @@
+<!-- This php file updates the hospital names-->
 <!DOCTYPE html>
 <html>
 <head>
 	<title>Update Hospital Name</title>
 	<link rel="stylesheet" type="text/css" href="doctordb.css">
-	<link href="https://fonts.google.com/specimen/Fjalla+One" rel-"stylesheet">
-	<script src="doctors.js"></script>
 </head>
 <body>
 
 <?php
-   include 'connecttodb.php';
+   include 'connecttodb.php';// connect to the db
 ?>
 <h1>Update Hospital Name:</h1>
 
 <?php
-$prev = $_POST['hosp'];
-$newname = $_POST['hospName'];
+$hid = $_POST['hosp'];// hosp id 
+$newname = $_POST['hospName'];// new name
 if (isset($_POST['submit'])) {
- if ($prev  == "ABC") {
-   $query1 = 'UPDATE hospital SET hospital.name="'.$newname.'" WHERE hospital.hosCode="ABC"';
-   $result = mysqli_query($connection,$query1);
+    
+    // for each if statement the id is taken and the name is then changed 
+    
+ if ($hid  == "ABC") {
+   $query1 = 'UPDATE hospital SET hospital.name="'.$newname.'" WHERE hospital.hosCode="ABC"';// update query
+   $result = mysqli_query($connection,$query1);// send the query into the db
    if (!$result) {
           die("Hospital name was not updated because the query failed");
    } else {echo "Updated London' Victoria Hospital's Name";}
-} if ($prev  == "BBC") {
+     
+} if ($hid  == "BBC") {
    $query1 = 'UPDATE hospital SET hospital.name="'.$newname.'" WHERE hospital.hosCode="BBC"';
    $result = mysqli_query($connection,$query1);
    if (!$result) {
           die("Hospital name was not updated because the query failed");
    } else { echo "Updated St.Joseph's name";}
-} if ($prev  == "DDE") {
+     
+     
+} if ($hid  == "DDE") {
    $query1 = 'UPDATE hospital SET hospital.name="'.$newname.'" WHERE hospital.hosCode="DDE"';
    $result = mysqli_query($connection,$query1);
    if (!$result) {
           die("Hospital name was not updated because the query failed");
    } else {echo "Updated Victoria's Victoria Hospital's name";}
 }}
-   mysqli_close($connection);
+   mysqli_close($connection);// close the connection 
 ?>
-</form>
+
 </body>
 </html>

@@ -35,7 +35,8 @@
    
     $query1 ='SELECT * FROM treats WHERE treats.docLicNum="'.$licNum.'";'; // check to see if the doctor treats any patients 
        $result = mysqli_query($connection, $query1);
-       if (mysqli_num_rows($result)==0)
+       // if teh doc doesn't treat any patients delete 
+        if (mysqli_num_rows($result)==0)
        {
     $query = 'DELETE FROM doctor WHERE doctor.docLicNum="' . $licNum . '" AND doctor.firstName = "' . $fName . '" AND doctor.lastName = "'. $lName .'"'; // delete teh doctor
        $result2 = mysqli_query($connection, $query);
@@ -48,7 +49,7 @@
     }
        
 }
-        // make sure the doc has to be deleted 
+        // make sure the doc has to be deleted if they are treating a patient
         else {
 	echo "Are you sure you want to delete a doctor that treats patients right now?";
 	echo "<form action='cascdeletedoc.php' method='post'>";       
@@ -60,8 +61,6 @@
    
     }
      
-    
-    
     
         mysqli_close($connection);
     

@@ -1,32 +1,33 @@
+<!-- Lists the docs with no patients --> 
 <!DOCTYPE html>
 <html>
 <head>
 	<title>Doctor's Database</title>
 	<link rel="stylesheet" type="text/css" href="doctordb.css">
-	<link href="https://fonts.google.com/specimen/Fjalla+One" rel-"stylesheet">
-	<script src="doctors.js"></script>
 </head>
 <body>
 <?php
-include 'connecttodb.php';
+include 'connecttodb.php';// connect to the db
 ?>
 <h1>These are the doctors with no patients:</h1>
 <ul>
 <?php
-   $query = 'SELECT doctor.firstName AS d_fname, doctor.lastName AS d_lname, treats.ohip FROM treats RIGHT JOIN doctor ON doctor.docLicNum=treats.docLicNum WHERE treats.ohip IS NULL';
+    // query gets the first, last name of the doc and the patient they "treat" is NULL aks they don't have any patients
+   $query = 'SELECT doctor.firstName, doctor.lastName, treats.ohip FROM treats RIGHT JOIN doctor ON doctor.docLicNum=treats.docLicNum WHERE treats.ohip IS NULL';
     $result=mysqli_query($connection,$query);
     if (!$result) {
          die("Database query failed.");
      }
+    // list all the doc's first and last name
     while ($row=mysqli_fetch_assoc($result)) {
         echo "<li>";
-        echo "<b>Doctor Name: </b>" . " " . $row["d_fname"] . " " . $row["d_lname"] . "</li>";
+        echo "<b>Doctor Name: </b>" . " " . $row["doctor.firstName"] . " " . $row["doctor.lastName"] . "</li>";
      }
      mysqli_free_result($result);
 ?>
 </ul>
 <?php
-   mysqli_close($connection);
+   mysqli_close($connection);// close connection to db
 ?>
 </body>
 </html>
