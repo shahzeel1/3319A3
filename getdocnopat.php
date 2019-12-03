@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Doctor's Database</title>
+	<title>Doctor's with no patients</title>
 	<link rel="stylesheet" type="text/css" href="doctordb.css">
 </head>
 <body>

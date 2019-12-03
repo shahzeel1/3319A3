@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Doctor's Database</title>
+	<title>Delete Doc Anyway</title>
 	<link rel="stylesheet" type="text/css" href="doctordb.css">
 </head>
 <body>
