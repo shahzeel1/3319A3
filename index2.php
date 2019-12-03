@@ -118,7 +118,7 @@
   </h3>
   <p>
     <br>
-  </p> <!-- pick the name you want to update-->
+  </p> <!-- pick the name you want to update-->        
 <?php
     include 'connecttodb.php';
     
@@ -128,25 +128,27 @@
           die("Database Query Fail");
    }
          while ($row=mysqli_fetch_assoc($result)) {
-        
         echo "<p style='text-align: left;'>";
         echo "<br>".$row["name"] . " " . $row["city"] ." ". $row["province"];
-        echo"<input type='radio' name='hosp' value='".["hosCode"].">" ;
+        echo"<input type='radio' name='hosp' value='".$row["hosCode"]."'>" ;
         echo"</p>"; 
         
      }
   
      mysqli_close($connection);
     
- 
-  echo'<p style="text-align: left;">
+?> 
+  <p style="text-align: left;">
+
+  </p>
+  <p style="text-align: left;">
     <br>What did you want to change the name to?
     <br>
     <input type="text" name="hospName" value=""> 
     <input type="submit" name="submit" value="Update Hospital Name">
   </p>
-  </form>'
-?> 
+  </form>
+    
     <!--Get the hospital's info--> 
   <form action="hosplist.php" method="post">
       <h3 style="text-align: center;"> 
@@ -195,3 +197,4 @@
   </form>
 </body>
 </html>
+
