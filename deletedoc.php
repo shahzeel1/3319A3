@@ -21,8 +21,10 @@
    $lName = $_POST["lname"];// doc last name 
    $licNum = $_POST["licNum"];// doc license num
   
-    if (!isset($_POST["enter"])) 
-    {
+    $SESSION ['fname']= $fName;
+    $SESSION ['lname']= $lName;
+    $SESSION ['licNum']= $licNum;
+    
     $query1= 'SELECT * FROM doctor WHERE doctor.docLicNum="' . $licNum . '" AND doctor.firstName = "' . $fName . '" AND doctor.lastName = "'. $lName .'";'; // get query to see if the doc is in the database
    $result=mysqli_query($connection,$query1); // send the query into the db
    // f there are no results the doc doesn't exist
@@ -31,9 +33,9 @@
    }
     else{
    
-    $query1 ='SELECT * FROM treats WHERE doctor.docLicNum="'.$licNum.'";'; // check to see if the doctor treats any patients 
+    $query1 ='SELECT * FROM treats WHERE treats.docLicNum="'.$licNum.'";'; // check to see if the doctor treats any patients 
        $result = mysqli_query($connection, $query1);
-       if ($result)
+       if (mysqli_num_rows($result)==0)
        {
     $query = 'DELETE FROM doctor WHERE doctor.docLicNum="' . $licNum . '" AND doctor.firstName = "' . $fName . '" AND doctor.lastName = "'. $lName .'"'; // delete teh doctor
        $result2 = mysqli_query($connection, $query);
@@ -62,7 +64,7 @@
     
     
         mysqli_close($connection);
-    }
+    
 ?>
     </ol>
 </body>
