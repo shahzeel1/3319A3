@@ -1,4 +1,3 @@
-<!--This is the home page of the doctor's Database-->
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,12 +5,10 @@
   <link rel="stylesheet" type="text/css" href="doctordb.css">
 </head>
 <body>
-  <h1>Zeel's Doctor Database</h1> <!-- Header-->
-    <!-- If the user chooses to sort the doctor names, display the results in the the get doctors page-->
-  <form action="getdoctors.php" method="post">
-   <!-- Display all the possible ways to sort the names and give the user radio button choices to select.
+  <h1>Zeel's Doctor Database</h1><!-- Header--><!-- If the user chooses to sort the doctor names, display the results in the the get doctors page-->
+  <form action="getdoctors.php" method="post"><!-- Display all the possible ways to sort the names and give the user radio button choices to select.
         The user hits the get doctors button to get the results.-->
-      <table style="width: 100%;">
+    <table style="width: 100%;">
       <tbody>
         <tr>
           <td style="width: 50.0000%;">
@@ -43,52 +40,68 @@
         </tr>
       </tbody>
     </table>
-  </form>
-    
-<!-- Get the doc before a certain date-->    
+  </form><!-- Get the doc before a certain date-->
   <form action="getdoclic.php" method="post"><!-- go to the doc license info page-->
     <h3 style="text-align: center;">
       <br>
       <br>Want a Doctor who was licensed before a certain date?
     </h3>
     <p style="text-align: center;">Enter the license date in this format: YYYY-MM-DD
-      <br>
-        <!--Text box and then the submit button-->
+      <br><!--Text box and then the submit button--> 
       <input type="text" name="licdate" value="">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 
       <input type="submit" value="Get Doctor">
     </p>
-  </form>
-    
-    <!-- Add a new doc-->
+  </form><!-- Add a new doc-->
   <form action="adddoc.php" enctype="multipart/form-data" method="post"><!-- Go to add doc page-->
     <h3 style="text-align: center;">
       <br>
     </h3>
     <h3 style="text-align: center;">Add a New Doctor</h3>
-    <p>First Name: 
-      <input type="text" name="fName" value=""><!--Text Input Box-->
-      <br>Last Name: 
-      <input type="text" name="lName" value=""><!--Text Input Box-->
-      <br>Specialty: 
-      <input type="text" name="spec" value=""><!--Text Input Box-->
-      <br>License Number (ex. SD98): 
-      <input type="text" name="licNum" value=""><!--Text Input Box-->
-      <br>License Date (YYYY-MM-DD): 
-      <input type="text" name="licDate" value=""><!--Text Input Box-->
+    <p>
       <br>
-      <br>Hospital: <!-- select the hospital the doc works at (St.Joes is auto checked) --> 
-      <br>
-      <input type="radio" name="hosp" value="BBC" checked="checked">St.Joseph, London ON
-      <br>
-      <input type="radio" name="hosp" value="ABC">Victoria, London ON
-      <br>
-      <input type="radio" name="hospl" value="DDE">Victoria, Victoria BC
-    <br>    
-      <input type="submit" value="Add Doctor">
     </p>
-  </form>
-    
-    <!-- Delete the Doctor inputed by  the user -->
+    <table style="width: 100%;">
+      <tbody>
+        <tr>
+          <td style="width: 63.964%;">
+            <div style="text-align: center;">Info</div>
+          </td>
+          <td style="width: 35.8858%;">
+            <div data-empty="true" style="text-align: center;">Hospital</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 63.964%;">First Name: 
+            <input type="text" name="fName" value=""><!--Text Input Box-->
+            <br>Last Name: 
+            <input type="text" name="lName" value=""><!--Text Input Box-->
+            <br>Specialty: 
+            <input type="text" name="spec" value=""><!--Text Input Box-->
+            <br>License Number (ex. SD98): 
+            <input type="text" name="licNum" value=""><!--Text Input Box-->
+            <br>License Date (YYYY-MM-DD): 
+            <input type="text" name="licDate" value=""><!--Text Input Box-->
+            <br>
+            <br>
+          </td>
+          <td style="width: 35.8858%;">
+            <input type="radio" name="hosp" value="BBC" checked="checked">St.Joseph, London ON
+            <br>
+            <input type="radio" name="hosp" value="ABC">Victoria, London ON
+            <br>
+            <input type="radio" name="hospl" value="DDE">Victoria, Victoria BC
+            <br>
+            <input type="submit" value="Add Doctor">
+            <br>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <p>
+      <br>
+      <br>
+    </p>
+  </form><!-- Delete the Doctor inputed by  the user -->
   <form action="deletedoc.php" method="post"><!-- call delete doc page-->
     <h3 style="text-align: center;">
       <br>Delete a Doctor:
@@ -102,24 +115,21 @@
     <p>First Name: 
       <input type="text" name="fname" value=""> <!-- Doctor Name Input Text Box-->
       <br>Last Name: 
-      <input type="text" name="lname" value=""> 
-      <br>License Number (ex. HW10): 
+      <input type="text" name="lname" value="">
+      <br>License Number (ex. SD98): 
       <input type="text" name="licNum" value=""><!-- License Num Text Box-->
     </p>
     <p>
-      <input type="submit" name = "enter" value="Delete Doctor"><!-- Delete Button-->
+      <input type="submit" name="enter" value="Delete Doctor"><!-- Delete Button-->
     </p>
-  </form>
-    
-    <!-- Update the hospital name-->
-    <form action="updatehospname.php" method="post" style="text-align: center;"><!-- go to the updatehospname.php-->
-  <h3 style="text-align: center;">
-    <br>Update a Hospital Name:
-  </h3>
-  <p>
-    <br>
-  </p> <!-- pick the name you want to update-->        
-<?php
+  </form><!-- Update the hospital name-->
+  <form action="updatehospname.php" method="post" style="text-align: center;"><!-- go to the updatehospname.php-->
+    <h3 style="text-align: center;">
+      <br>Update a Hospital Name:
+    </h3>
+    <p>
+      <br>
+    </p><!-- pick the name you want to update--><!--?php
     include 'connecttodb.php';
     
     $query = ' SELECT name, province, city, hosCode FROM hospital;'; //get's info of the doctor specified by the user
@@ -128,42 +138,34 @@
           die("Database Query Fail");
    }
          while ($row=mysqli_fetch_assoc($result)) {
-        echo "<p style='text-align: left;'>";
-        echo "<br>".$row["name"] . " " . $row["city"] ." ". $row["province"];
-        echo"<input type='radio' name='hosp' value='".$row["hosCode"]."'>" ;
-        echo"</p>"; 
-        
-     }
-  
-     mysqli_close($connection);
-    
-?> 
-  <p style="text-align: left;">
-
-  </p>
-  <p style="text-align: left;">
-    <br>What did you want to change the name to?
-    <br>
-    <input type="text" name="hospName" value=""> 
-    <input type="submit" name="submit" value="Update Hospital Name">
-  </p>
-  </form>
-    
-    <!--Get the hospital's info--> 
+        echo "<p style='text-align: left;'-->"; echo "
+    <br>".$row["name"] . " " . $row["city"] ." ". $row["province"]; echo" 
+    <input type="radio" name="hosp" value="&quot;.$row[&quot;hosCode&quot;].&quot;">" ; echo"
+    <p>
+      <br>
+    </p>"; } mysqli_close($connection); ?&gt;
+    <p style="text-align: left;">
+      <br>
+    </p>
+    <p style="text-align: left;">
+      <br>What did you want to change the name to?
+      <br>
+      <input type="text" name="hospName" value=""> 
+      <input type="submit" name="submit" value="Update Hospital Name">
+    </p>
+  </form><!--Get the hospital's info-->
   <form action="hosplist.php" method="post">
-      <h3 style="text-align: center;"> 
-    <br>Hospital Info List 
-     </h3>
+    <h3 style="text-align: center;">
+      <br>Hospital Info List
+    </h3>
     <p style="text-align: center;">
-      <br> 
-    <input type="submit" name="submit" value="Check it out">  
-  </p> 
-  </form>
-  
-<!-- Get the patients info based on their ohip -->    
-  <form action="getpatientinfo.php" method="post" >
-      <h3 style="text-align: center;">
-    <br>Get Patient Info
+      <br>
+      <input type="submit" name="submit" value="Check it out">
+    </p>
+  </form><!-- Get the patients info based on their ohip -->
+  <form action="getpatientinfo.php" method="post">
+    <h3 style="text-align: center;">
+      <br>Get Patient Info
     </h3>
     <p style="text-align: center;">Enter Patient Id (OHIP No.)
       <br>
@@ -171,25 +173,21 @@
       <br>
       <input type="submit" value="Get Patient Info">
     </p>
-    </form>
-    
-<!-- Assign/Remove a adoc from a patient-->    
+  </form><!-- Assign/Remove a adoc from a patient-->
   <form action="assigndoc.php" method="post">
     <h3 style="text-align: center;">Add/Remove Doctor to a Patient</h3>
-  <p style="text-align: left;">DoctorID: <!-- doc license num-->
-    <input type="text" name="doc" value="">
-    <br>PatientID: <!-- ohip num -->
-    <input type="text" name="ohip" value="">
-  </p>
-  <p style="text-align: left;">Add or Remove? <!-- Prompt user to pick a button-->
-    <input type="submit" name="add" value="Add"> 
-    <input type="submit" name="remove" value="Remove">
-  </p>
-      
-      <!-- get docs with no patients-->
-    </form>
-    <form action="getdocnopat.php" method="post" >
-   <h3 style="text-align: center;">List Doctors with No Patients</h3>
+    <p style="text-align: left;">DoctorID:<!-- doc license num--> 
+      <input type="text" name="doc" value="">
+      <br>PatientID:<!-- ohip num --> 
+      <input type="text" name="ohip" value="">
+    </p>
+    <p style="text-align: left;">Add or Remove?<!-- Prompt user to pick a button--> 
+      <input type="submit" name="add" value="Add"> 
+      <input type="submit" name="remove" value="Remove">
+    </p><!-- get docs with no patients-->
+  </form>
+  <form action="getdocnopat.php" method="post">
+    <h3 style="text-align: center;">List Doctors with No Patients</h3>
     <p style="text-align: center;">
       <br>
       <input type="submit" name="submit" value="Check it out">
@@ -197,4 +195,3 @@
   </form>
 </body>
 </html>
-
