@@ -21,7 +21,7 @@ include 'connecttodb.php';
     var_dump($licNum);
     var_dump($fname);
     var_dump($lname);
-      $query = 'DELETE FROM doctor WHERE doctor.docLicNum="' . $licNum . '" AND doctor.firstName = "' . $fName . '" AND doctor.lastName = "'. $lName .'";'; // delete teh doctor
+      $query = 'DELETE FROM doctor WHERE doctor.docLicNum="' . $licNum . '" AND doctor.firstName = "' . $fname . '" AND doctor.lastName = "'. $lname .'";'; // delete teh doctor
        $result2 = mysqli_query($connection, $query);
    
            if (!$result2) {
